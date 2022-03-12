@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_12_133944) do
+ActiveRecord::Schema.define(version: 2022_03_12_145145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,24 @@ ActiveRecord::Schema.define(version: 2022_03_12_133944) do
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.bigint "activity_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "level_id", null: false
+    t.boolean "monday", default: false, null: false
+    t.boolean "tuesday", default: false, null: false
+    t.boolean "wednesday", default: false, null: false
+    t.boolean "thursday", default: false, null: false
+    t.boolean "friday", default: false, null: false
+    t.boolean "saturday", default: false, null: false
+    t.boolean "sunday", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["activity_id"], name: "index_goals_on_activity_id"
+    t.index ["level_id"], name: "index_goals_on_level_id"
+    t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
   create_table "levels", force: :cascade do |t|
@@ -41,4 +59,7 @@ ActiveRecord::Schema.define(version: 2022_03_12_133944) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "goals", "activities"
+  add_foreign_key "goals", "levels"
+  add_foreign_key "goals", "users"
 end
