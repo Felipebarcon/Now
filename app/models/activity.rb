@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
   has_many :goals
 
-  validates :type, presence: true
+  validates :name, presence: true
 end
