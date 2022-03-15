@@ -1,0 +1,15 @@
+<div class="main-start-div" id="step-3">
+    <div class="main-start-div-content">
+      <div>
+        <%= f.association :level,
+                  legend_tag: false,
+                  as: :radio_buttons,
+                  collection_wrapper_tag: 'div',
+                  collection_wrapper_class: 'level-wrapper',
+                  item_wrapper_class: 'level-item',
+                  input_html: {class: 'level-selector'},
+                  collection: levels %>
+        <%= f.submit class: 'btn btn-flat' %>
+      </div>
+    </div>
+</div>
