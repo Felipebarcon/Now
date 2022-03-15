@@ -1,7 +1,13 @@
 <div class="main-start-div" id="step-1">
     <div class="main-start-div-content">
-      <% activities.each do |activity| %>
-      <%= activity.name %>
-      <% end %>
+      <%= f.association :activity,
+            legend_tag: false,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'activity-wrapper',
+            item_wrapper_class: 'activity-item',
+            input_html: {class: 'activity-selector'},
+            collection: activities %>
+      <%= f.submit class: 'btn btn-flat' %>
     </div>
 </div>
