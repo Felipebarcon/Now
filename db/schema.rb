@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_14_132638) do
+ActiveRecord::Schema.define(version: 2022_03_14_170617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2022_03_14_132638) do
 
   create_table "goals", force: :cascade do |t|
     t.bigint "activity_id", null: false
-    t.bigint "user_id", null: false
     t.bigint "level_id", null: false
     t.boolean "monday", default: false, null: false
     t.boolean "tuesday", default: false, null: false
@@ -34,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_03_14_132638) do
     t.boolean "sunday", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
     t.index ["activity_id"], name: "index_goals_on_activity_id"
     t.index ["level_id"], name: "index_goals_on_level_id"
     t.index ["user_id"], name: "index_goals_on_user_id"
