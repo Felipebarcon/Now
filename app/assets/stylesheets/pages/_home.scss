@@ -12,8 +12,8 @@ animation01
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 15vw;
-    height: 15vw;
+    width: 30vw;
+    height: 30vw;
 }
 .line{
     display: block;
@@ -80,8 +80,8 @@ animation01
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 1.2vw;
-    height: 1.2vw;
+    width: 2.4vw;
+    height: 2.4vw;
     border: 0.1vw solid #fff;
     border-radius: 50%;
     opacity: 0;
@@ -134,8 +134,8 @@ animation01
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 13.5vw;
-    height: 13.5vw;
+    width: 27vw;
+    height: 27vw;
     overflow: hidden;
 }
 .wave_wrapper{
@@ -375,19 +375,19 @@ animation02
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 40vw;
-    height: 40vw;
+    width: 8vw;
+    height: 8vw;
     animation: rhombus_box 0.4s linear 3.55s forwards;
 }
 .rhombus_item_wrapper{
-    position: absolute;
+    position: 0;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 2.1vw;
-    height: 2.1vw;
+    width: 4vw;
+    height: 4vw;
     opacity: 0;
 }
 .rhombus_item{
@@ -397,8 +397,8 @@ animation02
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 2.1vw;
-    height: 2.1vw;
+    width: 8vw;
+    height: 8vw;
     background-color: #fff;
     transform: rotate(45deg)
 }
@@ -483,8 +483,8 @@ dotted circle
 }
 .dotted_hide{
     position: absolute;
-    width: 31vw;
-    height: 31vw;
+    width: 62vw;
+    height: 62vw;
     z-index: 1;
     top: 50%;
     left: 50%;
@@ -493,8 +493,8 @@ dotted circle
     overflow: hidden;
 }
 .dotted01{
-    width: 30vw;
-    height: 30vw;
+    width: 60vw;
+    height: 60vw;
     border: dotted 0.5vw #fff;
     z-index: 1;
     top: 50%;
@@ -513,15 +513,15 @@ dotted circle
 .dotted_right::before{
     top: 0;
     left: 0;
-    width: 32vw;
-    height: 32vw;
-    transform-origin: left 16vw;
+    width: 64vw;
+    height: 64vw;
+    transform-origin: left 32vw;
     animation: rotate-circle-right 0.5s linear 4.2s forwards;
 }
 .dotted_right{
     position: absolute;
-    width: 16vw;
-    height: 32vw;
+    width: 32vw;
+    height: 64vw;
     z-index: 1;
     top: 50%;
     left: 75%;
@@ -531,9 +531,9 @@ dotted circle
 .dotted01::after{
     top: -1vw;
     left: -17vw;
-    width: 32vw;
-    height: 32vw;
-    transform-origin: right 16vw;
+    width: 64vw;
+    height: 64vw;
+    transform-origin: right 32vw;
     animation: rotate-circle-left01 0.5s linear 4.2s forwards;
 }
 @keyframes rotate-circle-left01 {
@@ -565,8 +565,8 @@ gray circle
     animation-delay: 4.8s;
 }
 .gray01{
-    width: 8vw;
-    height: 8vw;
+    width: 16vw;
+    height: 16vw;
     background: #808184;
     z-index: 1;
     top: 50%;
@@ -575,21 +575,21 @@ gray circle
 }
 .gray01::before{
     top: 0;
-    left: 4vw;
-    width: 8vw;
-    height: 8vw;
+    left: 8vw;
+    width: 16vw;
+    height: 16vw;
     background: #fff;
-    transform-origin: left 4vw;
+    transform-origin: left 8vw;
     animation: rotate-circle-right 0.5s linear 4.8s forwards;
 
 }
 .gray01::after{
     top: 0;
-    left: -4vw;
-    width: 8vw;
-    height: 8vw;
+    left: -8vw;
+    width: 16vw;
+    height: 16vw;
     background: #fff;
-    transform-origin: right 4vw;
+    transform-origin: right 8vw;
     animation: rotate-circle-left03 0.5s linear 4.8s forwards;
 }
 @keyframes rotate-circle-left03 {
@@ -618,8 +618,8 @@ orange circle
     animation-delay: 5.3s;
 }
 .orange01{
-    width: 27vw;
-    height: 27vw;
+    width: 54vw;
+    height: 54vw;
     background: #f76236;
     z-index: 1;
     top: 50%;
@@ -628,21 +628,21 @@ orange circle
 }
 .orange01::before{
     top: 0;
-    left: 13.5vw;
-    width: 27vw;
-    height: 27vw;
+    left: 27vw;
+    width: 54vw;
+    height: 54vw;
     background: #fff;
-    transform-origin: left 13.5vw;
+    transform-origin: left 27vw;
     animation: rotate-circle-right 0.5s linear 5.3s forwards;
 
 }
 .orange01::after{
     top: 0;
-    left: -13.5vw;
-    width: 27vw;
-    height: 27vw;
+    left: -27vw;
+    width: 54vw;
+    height: 54vw;
     background: #fff;
-    transform-origin: right 13.5vw;
+    transform-origin: right 27vw;
     animation: rotate-circle-left02 0.5s linear 5.3s forwards;
 }
 @keyframes rotate-circle-left02 {
@@ -694,7 +694,7 @@ orange circle
     left: 50%;
     transform: translate(-50%, -50%);
     color: #313131;
-    font-size: 3.5vw;
+    font-size: 8vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 0.1em;
 }
