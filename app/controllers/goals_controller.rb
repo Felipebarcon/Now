@@ -3,7 +3,6 @@ class GoalsController < ApplicationController
     @activities = Activity.all
     @goal = Goal.new
     @levels = Level.all
-    @goal = Goal.new
   end
 
   def create
