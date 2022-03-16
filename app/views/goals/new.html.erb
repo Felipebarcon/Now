@@ -1,3 +1,4 @@
 <%= simple_form_for @goal do |f| %>
+  <%= render 'goals/shared/step_1', activities: @activities, goal: @goal, f: f %>
   <%= render "goals/shared/step_3", levels: @levels, goal: @goal, f: f %>
 <% end %>

@@ -1,6 +1,7 @@
 class GoalsController < ApplicationController
   def new
-
+    @activities = Activity.all
+    @goal = Goal.new
     @levels = Level.all
     @goal = Goal.new
   end
