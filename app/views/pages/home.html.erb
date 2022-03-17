@@ -49,6 +49,10 @@
     </div>
   </div>
   <div class="name">
-    <%= link_to ('<h1>NOW!</h1>').html_safe, '#' %>
+    <% if user_signed_in? %>
+      <%= link_to ('<h1>NOW!</h1>').html_safe, dashboard_path %>
+    <% else %>
+      <%= link_to ('<h1>NOW!</h1>').html_safe, new_goal_path %>
+    <% end %>
   </div>
 </div>

@@ -25,7 +25,11 @@ class GoalsController < ApplicationController
     @goal.save
 
     @goal.update(goal_params)
-    redirect_to root_path
+    redirect_to dashboard_path
+  end
+
+  def dashboard
+
   end
 
   private
