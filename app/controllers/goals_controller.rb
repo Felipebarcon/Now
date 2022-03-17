@@ -7,14 +7,9 @@ class GoalsController < ApplicationController
 
   def create
     @goal = Goal.new(goal_params)
-    @activity = Activity.find(params[:activity_id])
-    @level = Level.find(params[:level_id])
-
-    @goal.activity = @activity
-    @goal.level = @level
 
     if @goal.save
-      redirect_to summary_path
+      redirect_to summary_path(@goal)
     else
       render "new"
     end
@@ -36,6 +31,6 @@ class GoalsController < ApplicationController
   private
 
   def goal_params
-    params.require(:goal).permit(:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)
+    params.require(:goal).permit(:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :activity_id, :level_id)
   end
 end
