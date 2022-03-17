@@ -1,4 +1,12 @@
 #yoda {
+
+  .main-start-div-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .bubble {
     position: relative;
     font-family: sans-serif;
@@ -7,7 +15,7 @@
     width: 300px;
     background: #fff;
     border-radius: 40px;
-    padding: 24px;
+    padding: 50px;
     text-align: center;
     color: #000;
   }
@@ -21,7 +29,20 @@
     border-right: 12px solid transparent;
     border-top: 12px solid #fff;
     border-bottom: 20px solid transparent;
-    left: 32px;
+    right: 30px;
     bottom: -24px;
   }
+  .yoda-says{
+    margin-bottom: 2rem;
+  }
+
+  .yoda-img-div{
+    display: flex;
+    justify-content: center;
+    .yoda-img{
+      width: 75%;
+      height: auto;
+    }
+  }
+
 }

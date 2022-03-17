@@ -3,6 +3,7 @@ class GoalsController < ApplicationController
     @activities = Activity.all
     @goal = Goal.new
     @levels = Level.all
+    @yoda_phrase_1 = "Test"
   end
 
   def create

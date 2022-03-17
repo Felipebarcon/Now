@@ -6,3 +6,13 @@ html, body {
   background-color: #000000;
   background-image: linear-gradient(280deg, #131313 0%, #313131 74%);
 }
+
+.main-start-div {
+  height:100vh;
+  margin-top: 5vh;
+
+  .main-start-div-content{
+    width: 100%;
+    height: 100%;
+  }
+}
