@@ -10,12 +10,14 @@ User.destroy_all
 puts "Destroying Activities"
 Activity.destroy_all
 
+puts "Creating users"
 users = User.create([
     {email: "felipe@email.com", password: "password", username: "felipe"},
     {email: "alexandre@email.com", password: "password", username: "alexandre"},
     {email: "anais@email.com", password: "password", username: "anais"}
   ])
 
+puts "Creating Activities"
 activities = Activity.create([
     {name: "Sport"},
     {name: "Finance"},
