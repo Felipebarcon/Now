@@ -14,10 +14,23 @@ class GoalsController < ApplicationController
     @goal.level = @level
 
     if @goal.save
-      redirect_to root_path
+      redirect_to summary_path
     else
       render "new"
     end
+  end
+
+  def summary
+    @goal = Goal.find(params[:id])
+  end
+
+   def update
+    @goal = Goal.find(params[:id])
+    @goal.user = current_user
+    @goal.save
+
+    @goal.update(goal_params)
+    redirect_to root_path
   end
 
   private
