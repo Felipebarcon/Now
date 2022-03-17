@@ -9,6 +9,8 @@ puts "Destroying Users"
 User.destroy_all
 puts "Destroying Activities"
 Activity.destroy_all
+puts "Destroying Level"
+Level.destroy_all
 
 puts "Creating users"
 users = User.create([
@@ -24,4 +26,11 @@ activities = Activity.create([
     {name: "Lecture"},
     {name: "Meditation"},
     {name: "Projects"}
+  ])
+
+puts "Creating levels"
+levels = Level.create([
+    {name: "Beginner", frequency: 2},
+    {name: "Medium", frequency: 4},
+    {name: "Hard", frequency: 6},
   ])
