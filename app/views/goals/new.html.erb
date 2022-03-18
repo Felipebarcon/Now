@@ -1,8 +1,8 @@
 <%= simple_form_for @goal do |f| %>
-  <%= render 'goals/shared/yoda', activities: @activities, goal: @goal, f: f, yoda_phrase_1: @yoda_phrase_1%>
+  <%#= render 'goals/shared/yoda', activities: @activities, goal: @goal, f: f, yoda_phrase_1: @yoda_phrase_1%>
   <%= render 'goals/shared/step_1', activities: @activities, goal: @goal, f: f %>
-  <%= render 'goals/shared/yoda', activities: @activities, goal: @goal, f: f, yoda_phrase_2: @yoda_phrase_2%>
+  <%#= render 'goals/shared/yoda', activities: @activities, goal: @goal, f: f, yoda_phrase_2: @yoda_phrase_2%>
   <%= render 'goals/shared/step_2', goal: @goal, f: f %>
-  <%= render 'goals/shared/yoda', activities: @activities, goal: @goal, f: f, yoda_phrase_3: @yoda_phrase_3%>
+  <%#= render 'goals/shared/yoda', activities: @activities, goal: @goal, f: f, yoda_phrase_3: @yoda_phrase_3%>
   <%= render "goals/shared/step_3", levels: @levels, goal: @goal, f: f %>
 <% end %>
