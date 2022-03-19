@@ -5,15 +5,70 @@ html, body {
   width: 100%;
   background-color: #000000;
   background-image: linear-gradient(280deg, #131313 0%, #313131 74%);
+  position: relative;
+}
+
+#yoda-1{
+  z-index: 60;
+  .next-btn{
+    z-index:69;
+  }
+}
+
+#step-1{
+  z-index: 50;
+  .next-btn{
+    z-index:59;
+  }
+}
+
+#yoda-2{
+  z-index: 40;
+  .next-btn{
+    z-index:49;
+  }
+}
+
+#step-2{
+  z-index: 30;
+  .next-btn{
+    z-index:39;
+  }
+}
+
+#yoda-3{
+  z-index: 20;
+  .next-btn{
+    z-index:29;
+  }
+}
+
+#step-3{
+  z-index: 10;
+  .next-btn{
+    z-index:19;
+  }
 }
 
 .main-start-div {
-  height: 100vh;
+
+  width: 100%;
+  height:100vh;
   padding-top: 66px;
+  position: absolute;
+  background-color: #000000;
+  background-image: linear-gradient(280deg, #131313 0%, #313131 74%);
+  transition: 0.5s;
+  left: 0;
 
   .main-start-div-content{
     width: 100%;
     height: 100%;
     position: relative;
   }
+}
+
+.slide-left{
+  left: -100%;
+  transition: left 0.4s;
 }
