@@ -8,10 +8,11 @@ html, body {
 }
 
 .main-start-div {
-  height: 100vh;
+  height:100vh;
 
   .main-start-div-content{
     width: 100%;
     height: 100%;
+    position: relative;
   }
 }
