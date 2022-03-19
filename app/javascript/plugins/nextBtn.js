@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b608447e6ad91c95caab7dfbb1b52e39759ee1cc
 const nextBtn = () => {
   const btns = document.querySelectorAll('.next-btn');
   btns.forEach((btn) => {
