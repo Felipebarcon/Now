@@ -1,7 +1,7 @@
 const typed = () => {
   var typed = new Typed('#typed', {
     stringsElement: '#typed-strings',
-    typeSpeed: 10
+    typeSpeed: 30
   });
   return typed;
 }
