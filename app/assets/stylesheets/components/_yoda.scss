@@ -9,13 +9,16 @@
 
   .bubble {
     position: relative;
+    display: flex;
+    align-items: center;
     font-family: sans-serif;
     font-size: 18px;
     line-height: 24px;
     width: 300px;
+    height: 150px;
     background: #fff;
     border-radius: 40px;
-    padding: 50px;
+    padding: 20px;
     text-align: center;
     color: #000;
   }
@@ -34,6 +37,9 @@
   }
   .yoda-says{
     margin-bottom: 2rem;
+    h3{
+      font-size: 1.4rem;
+    }
   }
 
   .yoda-img-div{
@@ -44,5 +50,4 @@
       height: auto;
     }
   }
-
 }
