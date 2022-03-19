@@ -10,12 +10,12 @@
   justify-content: space-around;
 }
 .summary-wrapper {
-   width: 80%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   flex-wrap: wrap;
-   margin-bottom: 2vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2vh;
   }
 
 .summary-header {
@@ -47,7 +47,7 @@
 }
 
 .choice-item {
-  background-color: rgb(108, 87, 87);
+  background-color: rgb(79, 73, 73);
   margin-bottom: 2vh;
   padding: 1vh 1vh 1vh 1vh;
 }
@@ -69,13 +69,15 @@
 .now-button {
   display: block;
   box-sizing: border-box;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
   width: 100%;
   font-size: 20px;
   text-align: center;
   color: rgb(214, 208, 208);
   padding: 3vh 3vh 3vh 3vh;
-  border-radius: 16px;
-  background-color: rgb(79, 73, 73);
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 24px;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #e9681e, #e66a4e);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   padding: 2vh 5vh;
 }
