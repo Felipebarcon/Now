@@ -35,28 +35,29 @@
       <div class="summary-item choice-item">
         <%= @goal.level.name.capitalize %>
       </div>
-  </div>
-  </div>
+    </div>
 
-  <div class="navigation-buttons">
-    <div class="back-button">
-      <%= link_to "<h2><i class='fa-solid fa-chevron-left summary-header'></i></h2>".html_safe, :back %>
+    <div class="navigation-buttons">
+      <div class="back-button">
+        <%= link_to "<h2><i class='fa-solid fa-chevron-left summary-header'></i></h2>".html_safe, :back %>
+      </div>
+      <div class="hidden-form">
+        <%= simple_form_for @goal do |f| %>
+          <%= f.input :monday, as: :hidden, value: @goal.monday %>
+          <%= f.input :tuesday, as: :hidden, value: @goal.tuesday %>
+          <%= f.input :wednesday, as: :hidden, value: @goal.wednesday %>
+          <%= f.input :thursday, as: :hidden, value: @goal.thursday %>
+          <%= f.input :friday, as: :hidden, value: @goal.friday %>
+          <%= f.input :saturday, as: :hidden, value: @goal.saturday %>
+          <%= f.input :sunday, as: :hidden, value: @goal.sunday %>
+          <%= f.association :activity, as: :hidden, value: @goal.activity %>
+          <%= f.association :level, as: :hidden, value: @goal.level %>
+      </div>
+      <div>
+          <%= f.submit 'Now !', class: "now-button" %>
+        <% end %>
+      </div>
     </div>
-    <div class="hidden-form">
-      <%= simple_form_for @goal do |f| %>
-        <%= f.input :monday, as: :hidden, value: @goal.monday %>
-        <%= f.input :tuesday, as: :hidden, value: @goal.tuesday %>
-        <%= f.input :wednesday, as: :hidden, value: @goal.wednesday %>
-        <%= f.input :thursday, as: :hidden, value: @goal.thursday %>
-        <%= f.input :friday, as: :hidden, value: @goal.friday %>
-        <%= f.input :saturday, as: :hidden, value: @goal.saturday %>
-        <%= f.input :sunday, as: :hidden, value: @goal.sunday %>
-        <%= f.association :activity, as: :hidden, value: @goal.activity %>
-        <%= f.association :level, as: :hidden, value: @goal.level %>
-    </div>
-    <div>
-        <%= f.submit 'Now !', class: "now-button" %>
-      <% end %>
-    </div>
+
   </div>
 </div>

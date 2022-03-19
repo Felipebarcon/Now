@@ -1,12 +1,11 @@
 .summary-container {
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 12vh;
-  padding-bottom: 12vh;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
+
 .summary-wrapper {
   width: 70%;
   display: flex;
@@ -30,10 +29,10 @@
   width: 100%;
   font-size: 20px;
   text-align: center;
-  color: rgb(214, 208, 208);
-  padding: 3vh 3vh 3vh 3vh;
+  color: black;
+  padding: 3vh;
   border-radius: 16px;
-  background-color: rgb(79, 73, 73);
+  background-color: rgba(255, 255, 255, 0.87);
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
@@ -44,9 +43,9 @@
 }
 
 .choice-item {
-  background-color: rgb(79, 73, 73);
+  background-color: rgba(255, 255, 255, 0.87);
   margin-bottom: 2vh;
-  padding: 1vh 1vh 1vh 1vh;
+  padding: 1vh;
 }
 
 .hidden-form {
@@ -54,16 +53,11 @@
 }
 
 .navigation-buttons {
-  width: 80%;
-  height: 10vh;
+  width: 100%;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vh 3vh;
-  margin-bottom: 3vh;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
 }
 
 .back-button {
@@ -79,7 +73,7 @@
   font-size: 20px;
   text-align: center;
   color: rgb(214, 208, 208);
-  padding: 3vh 3vh 3vh 3vh;
+  padding: 3vh;
   border-radius: 24px;
   background-color: initial;
   background-image: linear-gradient(-180deg, #e9681e, #e66a4e);
