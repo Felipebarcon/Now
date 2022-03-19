@@ -1,16 +1,12 @@
 .summary-container {
-  padding: 16px;
   margin: auto;
-  width: 100%;
-  height: 90vh;
-  max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 .summary-wrapper {
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,12 +15,11 @@
   }
 
 .summary-header {
-  padding-top: 2vh;
   color: rgb(255, 94, 0);
 }
 
 .choices {
-  width: 60%;
+  width: 50%;
 }
 
 .summary-item {
@@ -57,13 +52,22 @@
 }
 
 .navigation-buttons {
-  width: 90%;
+  width: 80%;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vh;
+  padding: 1vh 3vh;
   margin-bottom: 3vh;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.back-button {
+  padding-top: 2vh;
+  color: rgb(255, 94, 0);
 }
 
 .now-button {

@@ -1,40 +1,41 @@
-<div class="summary-container">
-
-  <div class="summary-header">
-    <h1>Summary</h1>
-  </div>
-
-  <div class="summary-wrapper">
-    <% if @goal.monday %>
-      <div class="summary-item day-item">Monday</div>
-    <% end %>
-    <% if @goal.tuesday %>
-      <div class="summary-item day-item">Tuesday</div>
-    <% end %>
-    <% if @goal.wednesday %>
-    <div class="summary-item day-item">Wednesday</div>
-    <% end %>
-      <% if @goal.thursday %>
-      <div class="summary-item day-item">Thursday</div>
-    <% end %>
-      <% if @goal.friday %>
-      <div class="summary-item day-item">Friday</div>
-    <% end %>
-      <% if @goal.saturday %>
-      <div class="summary-item day-item">Saturday</div>
-    <% end %>
-      <% if @goal.sunday %>
-      <div class="summary-item day-item">Sunday</div>
-    <% end %>
-  </div>
-
-  <div class="summary-wrapper choices">
-    <div class="summary-item choice-item">
-      <%= @goal.activity.name.capitalize %>
+<div class="main-start-div">
+  <div class="main-start-div-content summary-container">
+    <div class="summary-header">
+      <h1>Summary</h1>
     </div>
-    <div class="summary-item choice-item">
-      <%= @goal.level.name.capitalize %>
+
+    <div class="summary-wrapper">
+      <% if @goal.monday %>
+        <div class="summary-item day-item">Monday</div>
+      <% end %>
+      <% if @goal.tuesday %>
+        <div class="summary-item day-item">Tuesday</div>
+      <% end %>
+      <% if @goal.wednesday %>
+      <div class="summary-item day-item">Wednesday</div>
+      <% end %>
+        <% if @goal.thursday %>
+        <div class="summary-item day-item">Thursday</div>
+      <% end %>
+        <% if @goal.friday %>
+        <div class="summary-item day-item">Friday</div>
+      <% end %>
+        <% if @goal.saturday %>
+        <div class="summary-item day-item">Saturday</div>
+      <% end %>
+        <% if @goal.sunday %>
+        <div class="summary-item day-item">Sunday</div>
+      <% end %>
     </div>
+
+    <div class="summary-wrapper choices">
+      <div class="summary-item choice-item">
+        <%= @goal.activity.name.capitalize %>
+      </div>
+      <div class="summary-item choice-item">
+        <%= @goal.level.name.capitalize %>
+      </div>
+  </div>
   </div>
 
   <div class="navigation-buttons">
