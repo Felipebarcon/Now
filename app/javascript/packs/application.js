@@ -24,6 +24,12 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+
+var typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  typeSpeed: 10
+});
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();

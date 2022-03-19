@@ -3,7 +3,9 @@ class GoalsController < ApplicationController
     @activities = Activity.all
     @goal = Goal.new
     @levels = Level.all
-    @yoda_phrase_1 = "Test"
+    @yoda_phrase_1 = "Welcome ! So you need help to reach your goals ? You're in the right place ! First, choose a goal"
+    @yoda_phrase_2 = "Great ! Now, select the days of the week you're available !"
+    @yoda_phrase_3 = "Awesome ! Last step, you now have to select if you're motivated, very motivated, or SUPER motivated"
   end
 
   def create

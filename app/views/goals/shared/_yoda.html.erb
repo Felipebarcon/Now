@@ -1,10 +1,18 @@
 <div class="main-start-div" id="yoda">
-    <div class="main-start-div-content">
-      <div class="yoda-says">
-        <div class="bubble bubble-bottom-left"><%= @yoda_phrase_1 %></div>
-      </div>
-      <div class="yoda-img-div">
-        <%= image_tag "yoda.png", class: "yoda-img" %>
+  <div class="main-start-div-content">
+    <div class="yoda-says">
+      <div class="bubble bubble-bottom-left animate__animated animate__bounce">
+        <div id="typed-strings">
+          <p><%= yoda_phrase %></p>
+        </div>
+          <span id="typed"></span>
       </div>
     </div>
+    <div class="yoda-img-div">
+      <%= image_tag "yoda.png", class: "yoda-img animate__bounceIn" %>
+    </div>
+    <div class="next-btn">
+      <h2><i class='fa-solid fa-chevron-right summary-header'></i></h2>
+    </div>
+  </div>
 </div>
