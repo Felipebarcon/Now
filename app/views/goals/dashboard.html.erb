@@ -3,6 +3,9 @@
     <div class="dash-goals-title">
       <h2>My Goals</h2>
     </div>
+      <%= month_calendar do |date| %>
+        <%= date %>
+      <% end %>
     <% @goals.each do |goal| %>
     <div class="card__container">
       <div class="card">
