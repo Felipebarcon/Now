@@ -26,10 +26,12 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { nextBtn } from '../plugins/nextBtn';
 import { typedjs } from '../plugins/typed';
+import { clickBtndashboard } from '../plugins/clickBtndashboard';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   nextBtn();
-  typedjs();
+  // typedjs();
+  clickBtndashboard();
 });

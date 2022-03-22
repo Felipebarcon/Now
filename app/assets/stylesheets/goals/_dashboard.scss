@@ -1,0 +1,74 @@
+.click-button {
+  margin: 100px auto;
+  text-align: left;
+}
+
+button {
+  padding: 1rem;
+  background: transparent;
+  text-shadow: 1px 1px 1px #202020;
+  font-family: "Lato", sans-serif;
+  font-size: 18pt;
+  border: 1px solid lightblue;
+  color: lightblue;
+  border: 4em;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+
+// Cards
+
+.card {
+  width: 100%;
+  height: auto;
+  padding: auto;
+  margin-bottom: 3vh;
+  text-align: center;
+  background-color: #000000;
+  background-image: linear-gradient(280deg, #131313 0%, #313131 74%);
+  border: none;
+  &__container {
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-items: center;
+    color: white;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    background-color: #242424;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  &__header {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 20px;
+    margin: 40px auto;
+  }
+}
+
+.dash-goals-title {
+   color:#ec9f05;
+   font-size: 1rem;
+   display: flex;
+   justify-content: center;
+   padding-top: 4vh;
+   padding-bottom: 4vh;
+}

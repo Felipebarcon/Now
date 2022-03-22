@@ -35,7 +35,8 @@ class GoalsController < ApplicationController
   end
 
   def dashboard
-
+    @user = current_user
+    @goals = @user.goals
   end
 
   private
