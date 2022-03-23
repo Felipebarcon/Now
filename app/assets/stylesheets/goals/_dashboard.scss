@@ -1,17 +1,17 @@
 .click-button {
-  margin: 100px auto;
+  margin: auto;
   text-align: left;
 }
 
 button {
-  padding: 1rem;
+  padding: 0.5rem;
   background: transparent;
   text-shadow: 1px 1px 1px #202020;
   font-family: "Lato", sans-serif;
-  font-size: 18pt;
+  font-size: 12pt;
   border: 1px solid lightblue;
   color: lightblue;
-  border: 4em;
+  border: 3em;
   cursor: pointer;
   outline: none;
   font-size: 16px;
@@ -28,39 +28,34 @@ button {
 
 // Cards
 
+.card__container {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100vh;
+}
+
 .card {
-  width: 100%;
-  height: auto;
-  padding: auto;
-  margin-bottom: 3vh;
+  width: 90%;
+  height: 25vh;
+  margin: 10px;
   text-align: center;
-  background-color: #000000;
-  background-image: linear-gradient(280deg, #131313 0%, #313131 74%);
   border: none;
-  &__container {
-    width:100%;
-    height:100%;
-    align-items: center;
-    justify-items: center;
-    color: white;
-  }
+  background-color: #383838;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 8px;
   &__content {
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
     align-items: center;
-    width: 90%;
-    height: 95%;
-    background-color: #242424;
-    margin: 10px auto;
-    border-radius: 8px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
   &__header {
     text-transform: uppercase;
     text-align: right;
-    font-size: 20px;
-    margin: 40px auto;
+    font-size: 1rem;
+    margin: auto;
   }
 }
 

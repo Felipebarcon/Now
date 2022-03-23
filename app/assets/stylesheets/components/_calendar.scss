@@ -1,9 +1,13 @@
 .simple-calendar {
   table {
-    min-height: 80vh;
+    max-height: 5vh;
+    max-width: 80vh;
+    color: white;
+    border-radius: 16px;
+    font-size: 0.8rem;
   }
   .today {
-    background-color: #FAF3DD;
+    background-color: #535352;
   }
 }
 
@@ -18,4 +22,12 @@
 .meeting:hover {
   background: #1BCB7F;
   color: white;
+}
+
+
+.btn-success {
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  border-radius: 16px;
+  border: none;
 }

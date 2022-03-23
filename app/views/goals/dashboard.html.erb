@@ -1,20 +1,26 @@
 <div class="main-start-div">
   <div class="main-start-div-content dashboard-container">
     <div class="dash-goals-title">
-      <h2>My Goals</h2>
+      <h2>My Dashboard</h2>
     </div>
-      <%= month_calendar do |date| %>
+    <div class="calendar">
+      <%= week_calendar do |date| %>
         <%= date %>
       <% end %>
-    <% @goals.each do |goal| %>
-    <div class="card__container">
-      <div class="card">
-        <div class="card__content">
-          <div class="click-button">
-            <button class="clickme">Add a step: 0</button>
-          </div>
-          <h3 class="card__header"><%= goal.activity.name %></h3>
-        </div>
-    <% end %>
     </div>
+
+    <div class="card__container">
+      <% @goals.each do |goal| %>
+        <div class="card">
+          <div class="card__content">
+            <div class="click-button">
+              <button class="clickme">Add a step: 0</button>
+            </div>
+            <h3 class="card__header"><%= goal.activity.name %></h3>
+            <h3 class="card__header"><%= goal.level.frequency %> times per week</h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
