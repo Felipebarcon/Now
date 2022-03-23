@@ -3,27 +3,29 @@
   text-align: left;
 }
 
-button {
-  padding: 0.5rem;
-  background: transparent;
-  text-shadow: 1px 1px 1px #202020;
-  font-family: "Lato", sans-serif;
-  font-size: 12pt;
-  border: 1px solid lightblue;
-  color: lightblue;
-  border: 3em;
-  cursor: pointer;
-  outline: none;
-  font-size: 16px;
-  -webkit-transform: translate(0);
-  transform: translate(0);
-  background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
-  border-radius: 65px;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
-  -webkit-transition: box-shadow 0.25s;
-  transition: box-shadow 0.25s;
-  color: white;
+.click-button button {
+  font-size: 1rem;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }
 
 // Cards
@@ -60,10 +62,26 @@ button {
 }
 
 .dash-goals-title {
-   color:#ec9f05;
-   font-size: 1rem;
-   display: flex;
-   justify-content: center;
-   padding-top: 4vh;
-   padding-bottom: 4vh;
+  color:rgb(180, 83, 3);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  padding-bottom: 4vh;
+}
+
+.frequency {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #27e98b
+}
+
+hr {
+    height: 1px;
+    width: 80vw;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }

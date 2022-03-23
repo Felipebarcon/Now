@@ -1,26 +1,31 @@
-<div class="main-start-div">
-  <div class="main-start-div-content dashboard-container">
-    <div class="dash-goals-title">
-      <h2>My Dashboard</h2>
-    </div>
-    <div class="calendar">
-      <%= week_calendar do |date| %>
-        <%= date %>
-      <% end %>
-    </div>
+<div class="dashboard-container">
 
-    <div class="card__container">
-      <% @goals.each do |goal| %>
-        <div class="card">
-          <div class="card__content">
-            <div class="click-button">
-              <button class="clickme">Add a step: 0</button>
-            </div>
-            <h3 class="card__header"><%= goal.activity.name %></h3>
-            <h3 class="card__header"><%= goal.level.frequency %> times per week</h3>
-          </div>
-        </div>
-      <% end %>
-    </div>
+  <div class="dash-goals-title">
+    <h2>My Dashboard</h2>
   </div>
+
+  <div class="calendar">
+    <%= week_calendar do |date| %>
+      <%= date %>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div class="card__container">
+    <% @goals.each do |goal| %>
+      <div class="card">
+        <div class="card__content">
+          <div class="click-button" id="total">
+            <button class="clickme" id="count">Add a step: 0</button>
+          </div>
+          <h3 class="card__header activity-name"><%= goal.activity.name %></h3>
+          <h3 class="card__header frequency"><%= goal.level.frequency %> times per week</h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <hr/>
+
 </div>
