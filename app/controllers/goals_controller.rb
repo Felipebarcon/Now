@@ -25,7 +25,7 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
   end
 
-   def update
+  def update
     @goal = Goal.find(params[:id])
     @goal.user = current_user
     @goal.save
