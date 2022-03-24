@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :goals, only: [:new, :create, :update]
   get 'goals/:id/summary', to: 'goals#summary', as: 'summary'
   get 'goals/dashboard', to: 'goals#dashboard', as: 'dashboard'
+
+  resources :events, only: [:new, :create]
 end
