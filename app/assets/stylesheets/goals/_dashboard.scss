@@ -75,32 +75,45 @@
   font-size: 0.8rem;
   color: #27e98b
 }
-.api {
-  color:white;
-    blockquote {
-    font-family:'Exo 2', sans-serif;
-    font-style:italic;
-    text-indent:-25px;
-    padding-right:25px;
-    padding-left:25px;
-    text-align:justify;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+.citation{
+  font-size: 1em;
+  width: 90%;
+  margin: auto;
+  font-family: 'Exo 2', sans-serif;
+  font-style:italic;
+  color: white;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background-color: #383838;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin-bottom: 1rem;
 }
 
-  blockquote:first-letter {
-      padding-left:25px;
-      font-size:1.4em;
-  }
-
-  span{
-    font-family:'Exo 2', sans-serif;
-    font-style:italic;
-    text-indent:-25px;
-    padding-right:25px;
-    padding-left:25px;
-    text-align:justify;
-  }
+.citation::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
 }
 
+.citation::after{
+  content: '';
+}
+
+.citation span{
+  display:block;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
 
 hr {
     height: 1px;
