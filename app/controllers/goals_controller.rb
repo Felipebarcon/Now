@@ -44,7 +44,7 @@ class GoalsController < ApplicationController
     citation_serialized = URI.open(url).read
     citation = JSON.parse(citation_serialized)
     @citation = "#{citation["citation"]["citation"]}"
-    @author = "#{"Une citation de: "}#{citation["citation"]["infos"]["personnage"]} - #{"Kaamelott"}"
+    @author = "#{"Une citation de: "}#{citation["citation"]["infos"]["personnage"]}"
   end
 
   private
