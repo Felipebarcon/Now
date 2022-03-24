@@ -20,8 +20,8 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <li class="nav-item d-flex">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>&nbsp&nbsp
           <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
         </li>
       <% end %>
