@@ -1,0 +1,15 @@
+<div class="mt-5 m-2">
+  <%= simple_form_for @event do |f| %>
+    <%= f.input :location %>
+    <%= f.input :description %>
+    <%= f.input :start_date_time,
+                as: :datetime,
+                html5: true,
+                min: DateTime.now %>
+    <%= f.input :end_date_time,
+                as: :datetime,
+                html5: true,
+                min: DateTime.now %>
+    <%= f.submit class: 'button' %>
+  <% end %>
+</div>
