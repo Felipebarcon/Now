@@ -1,3 +1,6 @@
+require "json"
+require "open-uri"
+
 class GoalsController < ApplicationController
   def new
     @activities = Activity.all
@@ -25,7 +28,7 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
   end
 
-   def update
+  def update
     @goal = Goal.find(params[:id])
     @goal.user = current_user
     @goal.save
@@ -35,7 +38,13 @@ class GoalsController < ApplicationController
   end
 
   def dashboard
-
+    @user = current_user
+    @goals = @user.goals
+    url = "https://kaamelott.chaudie.re/api/random"
+    citation_serialized = URI.open(url).read
+    citation = JSON.parse(citation_serialized)
+    @citation = "#{citation["citation"]["citation"]}"
+    @author = "#{"Une citation de: "}#{citation["citation"]["infos"]["personnage"]}"
   end
 
   private

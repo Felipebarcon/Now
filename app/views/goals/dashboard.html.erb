@@ -1,5 +1,36 @@
-<div class="main-start-div">
-  <div class="main-start-div-content">
-    <h1 class="summary-header">Coming soon...</h1>
+<div class="dashboard-container">
+
+  <div class="dash-goals-title">
+    <h2 class="animate__animated animate__slideInLeft">My Dashboard</h2>
   </div>
+
+  <div class="calendar">
+    <%= week_calendar do |date| %>
+      <%= date %>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div class="card__container">
+    <% @goals.each do |goal| %>
+      <div class="card">
+        <div class="card__content">
+          <div class="click-button" id="total">
+            <button class="clickme" id="count">Add a step: 0</button>
+          </div>
+          <h3 class="card__header activity-name"><%= goal.activity.name %></h3>
+          <h3 class="card__header frequency"><%= goal.level.frequency %> times per week</h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div class="api">
+    <h3 class="citation-title">La citation du jour par Kaamelott</h3>
+    <blockquote class="citation"><<%= @citation %><span><%= @author %></span></blockquote>
+  </div>
+
 </div>

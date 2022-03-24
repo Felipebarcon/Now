@@ -1,0 +1,134 @@
+.click-button {
+  margin: auto;
+  text-align: left;
+}
+
+.click-button button {
+  font-size: 1rem;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+// Cards
+
+.card__container {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100vh;
+}
+
+.card {
+  width: 90%;
+  height: 25vh;
+  margin: 10px;
+  text-align: center;
+  border: none;
+  background-color: #383838;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 8px;
+  &__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__header {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 1rem;
+    margin: auto;
+  }
+}
+
+.dash-goals-title {
+  color:#f47141;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  padding-bottom: 4vh;
+}
+
+.frequency {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #27e98b
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+.citation{
+  font-size: 1em;
+  width: 90%;
+  margin: auto;
+  font-family: 'Exo 2', sans-serif;
+  font-style:italic;
+  color: white;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background-color: #383838;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin-bottom: 1rem;
+}
+
+.citation::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.citation::after{
+  content: '';
+}
+
+.citation span{
+  display:block;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.citation-title {
+  color:#f47141;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+
+hr {
+    height: 1px;
+    width: 80vw;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

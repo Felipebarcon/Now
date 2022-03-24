@@ -1,0 +1,37 @@
+.simple-calendar {
+  table {
+    max-height: 5vh;
+    max-width: 80vh;
+    color: white;
+    border-radius: 16px;
+    font-size: 0.8rem;
+  }
+  .today {
+    background-color: #8f8f8f;
+  }
+}
+
+.meeting {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.meeting:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.btn-success {
+  border-radius: 8px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.calendar-heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

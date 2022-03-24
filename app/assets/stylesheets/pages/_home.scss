@@ -12,8 +12,8 @@ animation01
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30vw;
-    height: 30vw;
+    width: 15vw;
+    height: 15vw;
 }
 .line{
     display: block;
@@ -80,8 +80,8 @@ animation01
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 2.4vw;
-    height: 2.4vw;
+    width: 1.2vw;
+    height: 1.2vw;
     border: 0.1vw solid #fff;
     border-radius: 50%;
     opacity: 0;
@@ -134,8 +134,8 @@ animation01
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 27vw;
-    height: 27vw;
+    width: 13.5vw;
+    height: 13.5vw;
     overflow: hidden;
 }
 .wave_wrapper{
@@ -375,19 +375,19 @@ animation02
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 8vw;
-    height: 8vw;
+    width: 40vw;
+    height: 40vw;
     animation: rhombus_box 0.4s linear 3.55s forwards;
 }
 .rhombus_item_wrapper{
-    position: 0;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 4vw;
-    height: 4vw;
+    width: 2.1vw;
+    height: 2.1vw;
     opacity: 0;
 }
 .rhombus_item{
@@ -397,8 +397,8 @@ animation02
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 8vw;
-    height: 8vw;
+    width: 2.1vw;
+    height: 2.1vw;
     background-color: #fff;
     transform: rotate(45deg)
 }
@@ -446,9 +446,8 @@ animation02
     width: 100%;
     height: 100%;
 }
-
 .double_wrapper02{
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100%;
     animation: double_content forwards;
@@ -462,17 +461,17 @@ animation02
 }
 .double_wrapper01::before {
     content: "";
-    display: inside;
+    display: block;
     position: absolute;
+    background: #212022;
     z-index: 2;
-    overflow: hidden
 }
 .double_wrapper01::after {
     content: "";
-    display: inside;
+    display: block;
     position: absolute;
+    background: #212022;
     z-index: 3;
-    overflow: hidden
 }
 /*============
 dotted circle
@@ -483,8 +482,8 @@ dotted circle
 }
 .dotted_hide{
     position: absolute;
-    width: 62vw;
-    height: 62vw;
+    width: 31vw;
+    height: 31vw;
     z-index: 1;
     top: 50%;
     left: 50%;
@@ -493,16 +492,16 @@ dotted circle
     overflow: hidden;
 }
 .dotted01{
-    width: 60vw;
-    height: 60vw;
-    border: dotted 0.5vw #fff;
+    width: 30vw;
+    height: 30vw;
+    border: solid 0.5vw #fff;
+    background-color: #f47141;
     z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: visible;
 }
-
 .dotted_right::before{
     content: "";
     display: block;
@@ -513,15 +512,15 @@ dotted circle
 .dotted_right::before{
     top: 0;
     left: 0;
-    width: 64vw;
-    height: 64vw;
-    transform-origin: left 32vw;
+    width: 32vw;
+    height: 32vw;
+    transform-origin: left 16vw;
     animation: rotate-circle-right 0.5s linear 4.2s forwards;
 }
 .dotted_right{
     position: absolute;
-    width: 32vw;
-    height: 64vw;
+    width: 16vw;
+    height: 32vw;
     z-index: 1;
     top: 50%;
     left: 75%;
@@ -531,9 +530,9 @@ dotted circle
 .dotted01::after{
     top: -1vw;
     left: -17vw;
-    width: 64vw;
-    height: 64vw;
-    transform-origin: right 32vw;
+    width: 32vw;
+    height: 32vw;
+    transform-origin: right 16vw;
     animation: rotate-circle-left01 0.5s linear 4.2s forwards;
 }
 @keyframes rotate-circle-left01 {
@@ -558,59 +557,6 @@ dotted circle
 }
 
 /*============
-gray circle
-============*/
-.gray02{
-    top: -200%;
-    animation-delay: 4.8s;
-}
-.gray01{
-    width: 16vw;
-    height: 16vw;
-    background: #808184;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.gray01::before{
-    top: 0;
-    left: 8vw;
-    width: 16vw;
-    height: 16vw;
-    background: #fff;
-    transform-origin: left 8vw;
-    animation: rotate-circle-right 0.5s linear 4.8s forwards;
-
-}
-.gray01::after{
-    top: 0;
-    left: -8vw;
-    width: 16vw;
-    height: 16vw;
-    background: #fff;
-    transform-origin: right 8vw;
-    animation: rotate-circle-left03 0.5s linear 4.8s forwards;
-}
-@keyframes rotate-circle-left03 {
-    0%   {
-        transform: rotate(0deg);
-        background: #fff;
-    }
-    50%  {
-        transform: rotate(-180deg);
-        background: #fff;
-    }
-    50.01% {
-        transform: rotate(-360deg);
-        background: #808184;
-    }
-    100% {
-        transform: rotate(-360deg);
-        background: #808184;
-    }
-}
-/*============
 orange circle
 ============*/
 .orange02{
@@ -618,9 +564,9 @@ orange circle
     animation-delay: 5.3s;
 }
 .orange01{
-    width: 54vw;
-    height: 54vw;
-    background: #f76236;
+    width: 27vw;
+    height: 27vw;
+    background: #f47141;
     z-index: 1;
     top: 50%;
     left: 50%;
@@ -628,21 +574,21 @@ orange circle
 }
 .orange01::before{
     top: 0;
-    left: 27vw;
-    width: 54vw;
-    height: 54vw;
+    left: 13.5vw;
+    width: 27vw;
+    height: 27vw;
     background: #fff;
-    transform-origin: left 27vw;
+    transform-origin: left 13.5vw;
     animation: rotate-circle-right 0.5s linear 5.3s forwards;
 
 }
 .orange01::after{
     top: 0;
-    left: -27vw;
-    width: 54vw;
-    height: 54vw;
+    left: -13.5vw;
+    width: 27vw;
+    height: 27vw;
     background: #fff;
-    transform-origin: right 27vw;
+    transform-origin: right 13.5vw;
     animation: rotate-circle-left02 0.5s linear 5.3s forwards;
 }
 @keyframes rotate-circle-left02 {
@@ -656,11 +602,11 @@ orange circle
     }
     50.01% {
         transform: rotate(-360deg);
-        background: #f76236;
+        background: #f47141;
     }
     100% {
         transform: rotate(-360deg);
-        background: #f76236;
+        background: #f47141;
     }
 }
 
@@ -685,20 +631,39 @@ orange circle
     transform: translate(-50%, -50%);
     width: 30vw;
     height: 30vw;
-    animation: name 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) 5.9s forwards;
+    animation: name 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) 3s forwards;
     opacity: 0;
 }
-.name h1{
+.name h2{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #313131;
-    font-size: 8vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    font-family: 'Exo 2', sans-serif;
     letter-spacing: 0.1em;
 }
-
+.name_circle01{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+}
+.name_circle02{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+}
 @keyframes name {
     0%{
         opacity: 0;
@@ -706,4 +671,13 @@ orange circle
     100%{
         opacity: 1;
     }
+}
+
+.home-title {
+  display: flex;
+  justify-content: center;
+  color: #f47141;
+  padding-top: 10vh;
+  font-size: 2rem;
+  font-family: 'Exo 2', sans-serif;
 }

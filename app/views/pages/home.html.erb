@@ -1,4 +1,7 @@
 <div class="main-start-div d-flex flex-column justify-content-center" id="start-animation">
+  <div class="home-title">
+  <h1 class="home-title animate__animated animate__zoomIn animate__delay-4s">What if it all started...</h1>
+  </div>
   <div class="main-start-div-content">
     <div class="animation01">
       <div class="rhombus_small">
@@ -40,21 +43,11 @@
             <div class="double_wrapper01 dotted01"><span class="dotted_right"></span></div>
           </div>
         </div>
-        <div class="double_wrapper02">
-          <div class="double_wrapper01"></div>
-        </div>
-        <div class="double_wrapper02 gray02">
-          <div class="double_wrapper01 gray01"></div>
-        </div>
-        <div class="double_wrapper02 orange02">
-          <div class="double_wrapper01 orange01"></div>
-        </div>
-      </div>
       <div class="name">
         <% if user_signed_in? %>
-          <%= link_to ('<h1>NOW!</h1>').html_safe, dashboard_path %>
+          <%= link_to ('<h2>NOW!</h2>').html_safe, dashboard_path %>
         <% else %>
-          <%= link_to ('<h1>NOW!</h1>').html_safe, new_goal_path %>
+          <%= link_to ('<h2>NOW!</h2>').html_safe, new_goal_path %>
         <% end %>
       </div>
     </div>
