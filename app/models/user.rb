@@ -2,8 +2,6 @@ class User < ApplicationRecord
   has_many :goals, dependent: :destroy
 
   has_many :listings
-  has_many :events, through: :listings
-
   has_many :events, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
