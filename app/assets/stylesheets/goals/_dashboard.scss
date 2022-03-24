@@ -62,7 +62,7 @@
 }
 
 .dash-goals-title {
-  color:rgb(180, 83, 3);
+  color:#f47141;
   font-size: 0.8rem;
   display: flex;
   justify-content: center;
@@ -75,6 +75,32 @@
   font-size: 0.8rem;
   color: #27e98b
 }
+.api {
+  color:white;
+    blockquote {
+    font-family:'Exo 2', sans-serif;
+    font-style:italic;
+    text-indent:-25px;
+    padding-right:25px;
+    padding-left:25px;
+    text-align:justify;
+}
+
+  blockquote:first-letter {
+      padding-left:25px;
+      font-size:1.4em;
+  }
+
+  span{
+    font-family:'Exo 2', sans-serif;
+    font-style:italic;
+    text-indent:-25px;
+    padding-right:25px;
+    padding-left:25px;
+    text-align:justify;
+  }
+}
+
 
 hr {
     height: 1px;
