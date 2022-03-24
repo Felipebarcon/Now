@@ -1,3 +1,7 @@
 <%= simple_form_for @event do |f| %>
-
+  <%= f.input :location %>
+  <%= f.input :description %>
+  <%= f.input :start_date_time, as: :datetime, html5: true, min: Date.today %>
+  <%= f.input :end_date_time, as: :datetime, html5: true, min: Date.today %>
+  <%= f.submit class: 'button' %>
 <% end %>
