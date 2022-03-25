@@ -28,6 +28,7 @@ import 'animate.css';
 import { nextBtn } from '../plugins/nextBtn';
 import { typedjs } from '../plugins/typed';
 import { clickBtndashboard } from '../plugins/clickBtndashboard';
+import { initLocationAutocomplete} from '../plugins/init_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -36,3 +37,5 @@ document.addEventListener('turbolinks:load', () => {
   // typedjs();
   clickBtndashboard();
 });
+
+initLocationAutocomplete();

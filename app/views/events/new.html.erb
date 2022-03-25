@@ -4,7 +4,8 @@
     <div>
       <%= simple_form_for @event do |f| %>
       <%= f.input :location,
-                  label_html: { class: "white-label" } %>
+                  label_html: { class: "white-label" },
+                  input_html: { id: 'event-location'} %>
       <%= f.input :description,
                   label_html: { class: "white-label" } %>
       <%= f.input :start_date_time,
