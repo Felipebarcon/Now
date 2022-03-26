@@ -26,6 +26,7 @@ import 'animate.css';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { nextBtn } from '../plugins/nextBtn';
+import { prevBtn } from '../plugins/prevBtn';
 import { typedjs } from '../plugins/typed';
 import { clickBtndashboard } from '../plugins/clickBtndashboard';
 import { initLocationAutocomplete} from '../plugins/init_autocomplete';
@@ -34,8 +35,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   nextBtn();
+  prevBtn();
   // typedjs();
   clickBtndashboard();
+  initLocationAutocomplete();
 });
-
-initLocationAutocomplete();
