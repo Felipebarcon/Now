@@ -1,22 +1,36 @@
-<div class="main-start-div">
-  <div class="main-start-div-content general-container">
+<div class="main-event-div">
+  <div class="main-event-div-content">
+    <div class="mapbox">
+    </div>
     <% @events.each do |event| %>
-      <div class="card d-flex">
-        <div class="icon">
-          <%# if event.activity == 'Sport' %>
-            <%#= '<i class="fa-solid fa-person-walking"></i>'.html_safe %>
-          <%# elsif event.activity == 'Finance' %>
-            <%#= '<i class="fa-solid fa-coins"></i>'.html_safe %>
-          <%# elsif event.activity == 'Lecture' %>
-            <%#= '<i class="fa-solid fa-book"></i>'.html_safe %>
-          <%# elsif event.activity == 'Meditation' %>
-            <%#= '<i class="fa-solid fa-hands-holding"></i>'.html_safe %>
-          <%# elsif event.activity == 'Projects' %>
-            <%#= '<i class="fa-solid fa-lightbulb"></i>'.html_safe %>
-          <#% end %>
+      <%= link_to root_path do %>
+        <div class="event-card">
+          <div class="event-header">
+            <div class="event-icon ">
+              <span><%= event.activity.name %></span>
+            </div>
+            <div class="event-icon">
+              <% if event.activity.name == 'Sport' %>
+                <%= '<i class="fa-solid fa-person-walking orange"></i>'.html_safe %>
+              <% elsif event.activity.name == 'Finance' %>
+                <%= '<i class="fa-solid fa-coins orange"></i>'.html_safe %>
+              <% elsif event.activity.name == 'Lecture' %>
+                <%= '<i class="fa-solid fa-book orange"></i>'.html_safe %>
+              <% elsif event.activity.name == 'Meditation' %>
+                <%= '<i class="fa-solid fa-hands-holding orange"></i>'.html_safe %>
+              <% elsif event.activity.name == 'Projects' %>
+                <%= '<i class="fa-solid fa-lightbulb orange"></i>'.html_safe %>
+              <% end %>
+            </div>
+          </div>
+          <div class="pl-2">
+            <i class="fa-solid fa-location-dot white-label"></i>&nbsp<em><%= event.location %></em>
+          </div>
+          <div class="pl-2 pb-1">
+            <i class="fa-solid fa-calendar-day white-label"></i> &nbsp<strong><%= event.start_date_time.strftime("%a %d %b") %></strong> <strong><%= event.start_date_time.strftime("%l") %></strong>:<strong><%= event.start_date_time.strftime("%M %p") %></strong>
+          </div>
         </div>
-
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

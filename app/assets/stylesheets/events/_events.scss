@@ -1,0 +1,44 @@
+.main-event-div {
+  width: 100%;
+  padding-top: 66px;
+}
+
+.main-event-div-content {
+  width: 100%;
+  height: 100%;
+
+  a {
+    text-decoration: none;
+    color: lightgray;
+  }
+}
+
+.event-icon {
+  font-size: 30px;
+  color: #f47141;
+
+  span {
+    font-size: 26px;
+  }
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vh 2vh;
+  height: 22vh;
+  background-color: #383838;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 8px;
+  margin: 2vh 3vh;
+  position: relative;
+}
+
+.event-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+}
