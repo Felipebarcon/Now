@@ -1,10 +1,12 @@
+// Button
+
 .click-button {
   margin: auto;
   text-align: left;
 }
 
 .click-button button {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #fff;
   display: inline-flex;
   align-items: center;
@@ -61,7 +63,40 @@
   }
 }
 
-.dash-goals-title {
+.frequence {
+  display: inline;
+  padding-bottom: 1rem;
+}
+
+.frequency {
+  display: inline-block;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #27e98b;
+}
+
+#week-times {
+  display: inline-block;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #27e98b
+}
+
+.new-goal {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    i {
+      font-size: 3rem;
+      color: #f47141;
+      text-decoration: none;
+    }
+}
+
+// Title
+
+.dash-goals-title-page {
   color:#f47141;
   font-size: 0.8rem;
   display: flex;
@@ -70,11 +105,15 @@
   padding-bottom: 4vh;
 }
 
-.frequency {
-  font-style: italic;
+.dash-goals-title {
+  color:#f47141;
   font-size: 0.8rem;
-  color: #27e98b
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3vh;
 }
+
+// Citation
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 .citation{
@@ -122,6 +161,8 @@
   justify-content: center;
   padding-bottom: 2vh;
 }
+
+// HR
 
 hr {
     height: 1px;
