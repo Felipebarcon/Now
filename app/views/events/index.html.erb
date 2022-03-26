@@ -1,0 +1,22 @@
+<div class="main-start-div">
+  <div class="main-start-div-content general-container">
+    <% @events.each do |event| %>
+      <div class="card d-flex">
+        <div class="icon">
+          <%# if event.activity == 'Sport' %>
+            <%#= '<i class="fa-solid fa-person-walking"></i>'.html_safe %>
+          <%# elsif event.activity == 'Finance' %>
+            <%#= '<i class="fa-solid fa-coins"></i>'.html_safe %>
+          <%# elsif event.activity == 'Lecture' %>
+            <%#= '<i class="fa-solid fa-book"></i>'.html_safe %>
+          <%# elsif event.activity == 'Meditation' %>
+            <%#= '<i class="fa-solid fa-hands-holding"></i>'.html_safe %>
+          <%# elsif event.activity == 'Projects' %>
+            <%#= '<i class="fa-solid fa-lightbulb"></i>'.html_safe %>
+          <#% end %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
