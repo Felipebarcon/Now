@@ -11,9 +11,7 @@ const clickBtndashboard = () => {
     let count = 0;
     newArray.forEach((frequency) => {
       btn.addEventListener('click', (e) => {
-        console.log(newArray);
         if (count < frequency) {
-          console.log(count);
           count += 1;
           btn.innerHTML = "Add a step: " + count;
         } else {
