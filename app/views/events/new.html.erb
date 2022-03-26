@@ -1,8 +1,10 @@
 <div class="main-start-div">
-  <div class="main-start-div-content summary-container">
+  <div class="main-start-div-content general-container">
     <h2 class="summary-header">Event</h2>
     <div>
       <%= simple_form_for @event do |f| %>
+      <%= f.association :activity,
+                        label_html: { class: "white-label" } %>
       <%= f.input :location,
                   label_html: { class: "white-label" },
                   input_html: { id: 'event-location'} %>
@@ -20,7 +22,7 @@
                   label_html: { class: "white-label" } %>
     </div>
     <div>
-      <%= f.submit class: 'now-button button' %>
+      <%= f.submit class: 'now-button' %>
     </div>
     <% end %>
   </div>

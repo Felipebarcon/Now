@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :user
+  belongs_to :activity
   has_many :listings
   has_many :users, through: :listings
 
