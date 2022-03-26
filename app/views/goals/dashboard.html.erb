@@ -5,8 +5,16 @@
   </div>
 
   <div class="calendar">
-    <%= week_calendar do |date| %>
+    <%= week_calendar(events: @events, end_attribute: :end_time) do |date, events| %>
       <%= date %>
+
+      <% events.each do |event| %>
+        <div class="event">
+          <p><%= event.activity.name %></p>
+          <small><%= event.location %></small>
+          <!--<small><%= event.time unless event.multi_days? %></small>-->
+        </div>
+      <% end %>
     <% end %>
   </div>
 

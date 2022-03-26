@@ -11,6 +11,8 @@ puts "Destroying Activities"
 Activity.destroy_all
 puts "Destroying Level"
 Level.destroy_all
+puts "Destroying Events"
+Event.destroy_all
 
 puts "Creating users"
 users = User.create([
@@ -34,3 +36,6 @@ levels = Level.create([
     {name: "Medium", frequency: 4},
     {name: "Hard", frequency: 6},
   ])
+
+puts "Creating events"
+Event.create(start_time: DateTime.new(2022,3,26,17), end_time: DateTime.new(2022,3,26,19), user_id: User.first.id, location: "Genève", description: "Running", activity_id: Activity.first.id)
