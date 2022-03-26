@@ -5,7 +5,7 @@
       <%= simple_form_for @event do |f| %>
       <%= f.association :activity,
                         label_html: { class: "white-label" } %>
-      <%= f.input :location,
+      <%= f.input :address,
                   label_html: { class: "white-label" },
                   input_html: { id: 'event-location'} %>
       <%= f.input :description,

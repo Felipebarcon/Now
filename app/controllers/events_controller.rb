@@ -15,11 +15,18 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+
+    @markers = @events.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude
+      }
+    end
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:user_id, :location, :activity_id, :description, :start_date_time, :end_date_time )
+    params.require(:event).permit(:user_id, :address, :activity_id, :description, :start_date_time, :end_date_time )
   end
 end
