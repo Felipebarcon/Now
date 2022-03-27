@@ -1,7 +1,6 @@
 <div class="main-start-div">
   <div class="main-start-div-content general-container">
     <h2 class="summary-header">Event</h2>
-    <div>
       <%= simple_form_for @event do |f| %>
       <%= f.association :activity,
                         label_html: { class: "white-label" } %>
@@ -10,17 +9,16 @@
                   input_html: { id: 'event-location'} %>
       <%= f.input :description,
                   label_html: { class: "white-label" } %>
-      <%= f.input :start_date_time,
+      <%= f.input :start_time,
                   as: :datetime,
                   html5: true,
                   min: DateTime.now,
                   label_html: { class: "white-label" } %>
-      <%= f.input :end_date_time,
+      <%= f.input :end_time,
                   as: :datetime,
                   html5: true,
                   min: DateTime.now,
                   label_html: { class: "white-label" } %>
-    </div>
     <div>
       <%= f.submit class: 'now-button' %>
     </div>
