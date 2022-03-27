@@ -9,6 +9,11 @@
   .today {
     background-color: #8f8f8f;
   }
+  .calendar-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .event {
@@ -30,10 +35,4 @@
   margin-right: 0.3rem;
   background: #f47141;
   border: none;
-}
-
-.calendar-heading {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
