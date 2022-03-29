@@ -27,7 +27,7 @@ import 'animate.css';
 // import { initSelect2 } from '../components/init_select2';
 import { nextBtn } from '../plugins/nextBtn';
 import { prevBtn } from '../plugins/prevBtn';
-import { typedjs } from '../plugins/typed';
+// import { typedjs } from '../plugins/typed';
 import { clickBtndashboard } from '../plugins/clickBtndashboard';
 import { initLocationAutocomplete} from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
