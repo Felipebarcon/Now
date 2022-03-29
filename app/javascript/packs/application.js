@@ -40,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   // typedjs();
   clickBtndashboard();
   initLocationAutocomplete();
+  initMapbox();
 });
