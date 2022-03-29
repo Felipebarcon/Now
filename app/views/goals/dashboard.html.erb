@@ -11,7 +11,7 @@
       <% events.each do |event| %>
         <div class="event">
           <p><%= event.activity.name %></p>
-          <small><%= event.location %></small>
+          <small><%= event.address %></small>
           <small><%= event.start_time.strftime("%a %d %b") unless event.multi_days? %></small>
         </div>
       <% end %>
