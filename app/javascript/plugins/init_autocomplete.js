@@ -7,6 +7,4 @@ const initLocationAutocomplete = () => {
   }
 };
 
-
-
 export { initLocationAutocomplete };

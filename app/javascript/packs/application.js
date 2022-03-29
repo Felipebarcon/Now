@@ -26,9 +26,10 @@ import 'animate.css';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { nextBtn } from '../plugins/nextBtn';
-import { typedjs } from '../plugins/typed';
+// import { typedjs } from '../plugins/typed';
 import { clickBtndashboard } from '../plugins/clickBtndashboard';
 import { initLocationAutocomplete} from '../plugins/init_autocomplete';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -37,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   // typedjs();
   clickBtndashboard();
   initLocationAutocomplete();
+  initMapbox();
 });
