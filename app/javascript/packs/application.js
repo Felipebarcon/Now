@@ -36,6 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   nextBtn();
   // typedjs();
   clickBtndashboard();
+  initLocationAutocomplete();
 });
-
-initLocationAutocomplete();
