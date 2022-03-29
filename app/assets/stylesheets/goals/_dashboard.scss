@@ -115,7 +115,6 @@
 
 // Citation
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 .citation{
   font-size: 1em;
   width: 90%;
@@ -172,4 +171,12 @@ hr {
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+// Events
+
+.event-create {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }

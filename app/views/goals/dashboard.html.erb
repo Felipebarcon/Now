@@ -5,9 +5,21 @@
   </div>
 
   <div class="calendar">
-    <%= week_calendar do |date| %>
+    <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events| %>
       <%= date %>
+
+      <% events.each do |event| %>
+        <div class="event">
+          <p><%= event.activity.name %></p>
+          <small><%= event.location %></small>
+          <small><%= event.start_time.strftime("%a %d %b") unless event.multi_days? %></small>
+        </div>
+      <% end %>
     <% end %>
+  </div>
+
+  <div class="event-create">
+    <%= link_to "Create an event", new_event_path %>
   </div>
 
   <hr/>
