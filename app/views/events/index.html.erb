@@ -1,7 +1,6 @@
 <div class="main-event-div">
   <div class="main-event-div-content">
     <div id="map"
-        style="width: 100%; height: 100vh;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <% @events.each do |event| %>
@@ -29,7 +28,7 @@
             <i class="fa-solid fa-location-dot white-label"></i>&nbsp<em><%= event.address %></em>
           </div>
           <div class="pl-2 pb-1">
-            <i class="fa-solid fa-calendar-day white-label"></i> &nbsp<strong><%= event.start_date_time.strftime("%a %d %b") %></strong> <strong><%= event.start_date_time.strftime("%l") %></strong>:<strong><%= event.start_date_time.strftime("%M %p") %></strong>
+            <i class="fa-solid fa-calendar-day white-label"></i> &nbsp<strong><%= event.start_date_time.strftime("%a %d %b %l:%M %p") %></strong>
           </div>
         </div>
       <% end %>
