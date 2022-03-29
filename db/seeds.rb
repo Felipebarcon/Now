@@ -11,6 +11,8 @@ puts "Destroying Activities"
 Activity.destroy_all
 puts "Destroying Level"
 Level.destroy_all
+puts "Destroying Events"
+Event.destroy_all
 
 puts "Creating users"
 users = User.create([

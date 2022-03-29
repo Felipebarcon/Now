@@ -30,6 +30,7 @@ import { prevBtn } from '../plugins/prevBtn';
 import { typedjs } from '../plugins/typed';
 import { clickBtndashboard } from '../plugins/clickBtndashboard';
 import { initLocationAutocomplete} from '../plugins/init_autocomplete';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:

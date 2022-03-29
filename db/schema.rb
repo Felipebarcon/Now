@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_24_201548) do
+ActiveRecord::Schema.define(version: 2022_03_26_152612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,12 +23,16 @@ ActiveRecord::Schema.define(version: 2022_03_24_201548) do
 
   create_table "events", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "location", null: false
-    t.datetime "start_date_time", null: false
-    t.datetime "end_date_time", null: false
+    t.string "address", null: false
+    t.datetime "start_time", null: false
+    t.datetime "end_time", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
+    t.bigint "activity_id", null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.index ["activity_id"], name: "index_events_on_activity_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -79,6 +83,7 @@ ActiveRecord::Schema.define(version: 2022_03_24_201548) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "activities"
   add_foreign_key "events", "users"
   add_foreign_key "goals", "activities"
   add_foreign_key "goals", "levels"

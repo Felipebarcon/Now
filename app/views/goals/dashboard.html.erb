@@ -1,29 +1,57 @@
 <div class="dashboard-container">
 
-  <div class="dash-goals-title">
+  <div class="dash-goals-title-page">
     <h2 class="animate__animated animate__slideInLeft">My Dashboard</h2>
   </div>
 
   <div class="calendar">
-    <%= week_calendar do |date| %>
+    <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events| %>
       <%= date %>
+
+      <% events.each do |event| %>
+        <div class="event">
+          <p><%= event.activity.name %></p>
+          <small><%= event.location %></small>
+          <small><%= event.start_time.strftime("%a %d %b") unless event.multi_days? %></small>
+        </div>
+      <% end %>
     <% end %>
+  </div>
+
+  <div class="event-create">
+    <%= link_to "Create an event", new_event_path %>
   </div>
 
   <hr/>
 
+  <div class="dash-goals-title">
+    <h3 class="animate__animated animate__slideInLeft">My Goals</h3>
+  </div>
+
   <div class="card__container">
-    <% @goals.each do |goal| %>
-      <div class="card">
+    <% @goals.each_with_index do |goal, index| %>
+      <div class="card" id="<%= index %>">
         <div class="card__content">
           <div class="click-button" id="total">
-            <button class="clickme" id="count">Add a step: 0</button>
+            <button class="clickme" id="count">Completed? click!</button>
           </div>
           <h3 class="card__header activity-name"><%= goal.activity.name %></h3>
-          <h3 class="card__header frequency"><%= goal.level.frequency %> times per week</h3>
+          <div class="frequence">
+            <h3 class="card__header frequency"><%= goal.level.frequency %></h3>
+            <h3 id="week-times">Times per week</h3>
+          </div>
         </div>
       </div>
     <% end %>
+
+    <div class="card">
+      <div class="card__content">
+        <div class="new-goal">
+          <%= link_to ('<i class="fa-solid fa-circle-plus"></i>').html_safe, new_goal_path %>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <hr/>
