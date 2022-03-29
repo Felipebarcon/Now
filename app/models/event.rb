@@ -9,7 +9,7 @@ class Event < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
-  validates :description, :location, :start_time, :end_time, presence: true
+  validates :description, :address, :start_time, :end_time, presence: true
   validate :event_time_valid?
 
   default_scope -> { order(:start_time) }

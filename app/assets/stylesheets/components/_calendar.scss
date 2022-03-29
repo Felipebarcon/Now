@@ -19,7 +19,7 @@
 .event {
   text-align: center;
   color: #78C0A8;
-  padding: 0.2rem 1.4rem;
+  // padding: 0.2rem 1.4rem;
   border-radius: 4px;
   background: #383838;
   transition: background 0.3s ease;
@@ -35,4 +35,9 @@
   margin-right: 0.3rem;
   background: #f47141;
   border: none;
+}
+
+.table.table-striped {
+  margin: auto;
+  margin-bottom: 4vh;
 }

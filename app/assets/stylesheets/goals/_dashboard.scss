@@ -36,7 +36,10 @@
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   max-width: 100vh;
+  margin: auto;
 }
 
 .card {
@@ -178,5 +181,19 @@ hr {
 .event-create {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: auto;
   text-decoration: none;
+  width: 35%;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1vh;
+  border-radius: 24px;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #e9681e, #e66a4e);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  a {
+    color: #383838;
+    font-family: 'Exo 2', sans-serif;
+  }
 }
