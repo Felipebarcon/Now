@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :listings
   has_many :users, through: :listings
 
-  validates :description, :address, :start_date_time, :end_date_time, presence: true
+  validates :description, :address, :start_time, :end_time, presence: true
   validate :event_time_valid?
 
   geocoded_by :address
