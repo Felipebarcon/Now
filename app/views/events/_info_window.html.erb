@@ -1,6 +1,4 @@
-<%= link_to root_path do %>
-  <div class="event-window">
-    <%= event.activity.name %><br>
-    <%= event.start_time %>
-  </div>
+<%= link_to event_path(event), class:"outline-none" do %>
+  <h4><%= event.activity.name %></h4>
+  <p><%= event.start_time.strftime('%a %d %b %l:%M %p') %></p>
 <% end %>
