@@ -4,7 +4,7 @@
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <% @events.each do |event| %>
-      <%= link_to root_path do %>
+      <%= link_to event_path(event) do %>
         <div class="event-card">
           <div class="event-header">
             <div class="event-icon ">
@@ -24,11 +24,13 @@
               <% end %>
             </div>
           </div>
-          <div class="pl-2">
-            <i class="fa-solid fa-location-dot white-label"></i>&nbsp<em><%= event.address %></em>
-          </div>
-          <div class="pl-2 pb-1">
-            <i class="fa-solid fa-calendar-day white-label"></i> &nbsp<strong><%= event.start_time.strftime("%a %d %b %l:%M %p") %></strong>
+          <div>
+            <div class="pl-3 pb-1">
+              <i class="fa-solid fa-location-dot white-label"></i>&nbsp<em><%= event.address %></em>
+            </div>
+            <div class="pl-3 pb-1">
+              <i class="fa-solid fa-calendar-day white-label"></i> &nbsp<strong><%= event.start_time.strftime("%a %d %b %l:%M %p") %></strong>
+            </div>
           </div>
         </div>
       <% end %>
