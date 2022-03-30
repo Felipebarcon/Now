@@ -11,12 +11,8 @@
       <% events.each do |event| %>
         <div class="event">
           <p><%= event.activity.name %></p>
-<<<<<<< HEAD
-          <small><%= event.start_time.strftime("%k:%M") %></small>
-=======
-          <small><%= event.address %></small>
-          <small><%= event.start_time.strftime("%a %d %b") unless event.multi_days? %></small>
->>>>>>> c0c1abc4be6541054f86c4bb8af929a78afb5b67
+          <small><%= event.start_time.strftime("%H: %M") %></small>
+          <small><%= event.end_time.strftime("%H: %M") %></small>
         </div>
       <% end %>
     <% end %>
