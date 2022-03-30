@@ -7,12 +7,15 @@
     font-size: 0.8rem;
   }
   .today {
-    background-color: #8f8f8f;
+    background-color: #757575;
   }
   .calendar-heading {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+  .future.next-month {
+    background-color: #353535;
   }
 }
 
