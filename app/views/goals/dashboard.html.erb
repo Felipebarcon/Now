@@ -10,9 +10,9 @@
 
       <% events.each do |event| %>
         <div class="event">
-          <p><%= event.activity.name %></p>
-          <small><%= event.address %></small>
-          <small><%= event.start_time.strftime("%a %d %b") unless event.multi_days? %></small>
+          <p><%= link_to event.activity.name, event_path(event) %></p>
+          <small><%= event.start_time.strftime("%H: %M") %></small>
+          <small><%= event.end_time.strftime("%H: %M") %></small>
         </div>
       <% end %>
     <% end %>
@@ -30,15 +30,16 @@
 
   <div class="card__container">
     <% @goals.each_with_index do |goal, index| %>
-      <div class="card" id="<%= index %>">
-        <div class="card__content">
+      <div class="card">
+        <div class="card__content" id=<%= index %>>
           <div class="click-button" id="total">
-            <button class="clickme" id="count">Completed? click!</button>
+            <button class="clickme" id="count">Completed?</button>
           </div>
-          <h3 class="card__header activity-name"><%= goal.activity.name %></h3>
+          <h3 class="card__header activity-name"><%= goal.activity.name%></h3>
           <div class="frequence">
             <h3 class="card__header frequency"><%= goal.level.frequency %></h3>
             <h3 id="week-times">Times per week</h3>
+
           </div>
         </div>
       </div>

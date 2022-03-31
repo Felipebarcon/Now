@@ -1,27 +1,33 @@
 <div class="main-start-div">
-  <div class="main-start-div-content general-container">
+  <div class="main-start-div-content general-container" style="justify-content: space-evenly">
     <h2 class="summary-header">Event</h2>
-      <%= simple_form_for @event do |f| %>
-      <%= f.association :activity,
-                        label_html: { class: "white-label" } %>
-      <%= f.input :address,
-                  label_html: { class: "white-label" },
-                  input_html: { id: 'event-location'} %>
-      <%= f.input :description,
-                  label_html: { class: "white-label" } %>
-      <%= f.input :start_time,
-                  as: :datetime,
-                  html5: true,
-                  min: DateTime.now,
-                  label_html: { class: "white-label" } %>
-      <%= f.input :end_time,
-                  as: :datetime,
-                  html5: true,
-                  min: DateTime.now,
-                  label_html: { class: "white-label" } %>
-    <div>
-      <%= f.submit class: 'now-button' %>
-    </div>
+
+    <%= simple_form_for @event do |f| %>
+      <div class="form-inputs">
+        <%= f.association :activity,
+                          label_html: { class: "white-label" } %>
+        <%= f.input :address,
+                    label_html: { class: "white-label" },
+                    input_html: { id: 'event-location'} %>
+        <%= f.input :description,
+                    label_html: { class: "white-label" } %>
+        <%= f.input :start_time,
+                    as: :datetime,
+                    html5: true,
+                    min: DateTime.now,
+                    label_html: { class: "white-label" } %>
+        <%= f.input :end_time,
+                    as: :datetime,
+                    html5: true,
+                    min: DateTime.now,
+                    label_html: { class: "white-label" } %>
+      </div>
+
+
+      <div class="form-actions mt-5">
+        <%= f.submit class: "now-button", as: :submit %>
+      </div>
     <% end %>
+
   </div>
 </div>

@@ -7,19 +7,28 @@
     font-size: 0.8rem;
   }
   .today {
-    background-color: #8f8f8f;
+    background-color: #757575;
   }
   .calendar-heading {
     width: 100%;
     display: flex;
     justify-content: center;
   }
+  .future.next-month {
+    background-color: #353535;
+  }
+  .future.prev-month {
+    background-color: #353535;
+  }
+  .past.prev-month {
+    background-color: #353535;
+  }
 }
 
 .event {
   text-align: center;
   color: #78C0A8;
-  padding: 0.2rem 1.4rem;
+  // padding: 0.2rem 1.4rem;
   border-radius: 4px;
   background: #383838;
   transition: background 0.3s ease;
@@ -35,4 +44,13 @@
   margin-right: 0.3rem;
   background: #f47141;
   border: none;
+}
+
+.btn-success:hover {
+  background: #f47141;
+}
+
+.table.table-striped {
+  margin: auto;
+  margin-bottom: 4vh;
 }
