@@ -10,7 +10,7 @@
 
       <% events.each do |event| %>
         <div class="event">
-          <p><%= event.activity.name %></p>
+          <p><%= link_to event.activity.name, event_path(event) %></p>
           <small><%= event.start_time.strftime("%H: %M") %></small>
           <small><%= event.end_time.strftime("%H: %M") %></small>
         </div>
@@ -31,7 +31,7 @@
   <div class="card__container">
     <% @goals.each_with_index do |goal, index| %>
       <div class="card">
-        <div class="card__content">
+        <div class="card__content" id=<%= index %>>
           <div class="click-button" id="total">
             <button class="clickme" id="count">Completed?</button>
           </div>
