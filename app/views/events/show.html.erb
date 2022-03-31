@@ -3,22 +3,22 @@
     <div class="event-part-div">
       <div>
         <% if @event.activity.name == 'Sport' %>
-          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Sport Activity", class:"event-img" %>
         <% elsif @event.activity.name == 'Finance' %>
-          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Finance Activity", class:"event-img" %>
         <% elsif @event.activity.name == 'Lecture' %>
-          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Lecture Activity", class:"event-img" %>
         <% elsif @event.activity.name == 'Meditation' %>
-          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation Activity", class:"event-img" %>
         <% elsif @event.activity.name == 'Projects' %>
-          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Projects Activity", class:"event-img" %>
         <% end %>
       </div>
 
       <h3 class="orange text-center"><%= @event.activity.name %></h3>
 
       <div class="white-label organizer">
-        <i class="fa-solid fa-user"></i> Organised by <%= @event.user.username %>
+        <i class="fa-solid fa-user"></i> Organized by <%= @event.user.username %>
       </div>
 
       <div class="event-infos-card light-green">
