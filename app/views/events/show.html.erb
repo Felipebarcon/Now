@@ -1,0 +1,52 @@
+<div class="main-event-div">
+  <div class="main-event-div-content">
+    <div class="event-part-div">
+      <div>
+        <% if @event.activity.name == 'Sport' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+        <% elsif @event.activity.name == 'Finance' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+        <% elsif @event.activity.name == 'Lecture' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+        <% elsif @event.activity.name == 'Meditation' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+        <% elsif @event.activity.name == 'Projects' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation", class:"event-img" %>
+        <% end %>
+      </div>
+
+      <h3 class="orange text-center"><%= @event.activity.name %></h3>
+
+      <div class="white-label organizer">
+        <i class="fa-solid fa-user"></i> Organised by <%= @event.user.username %>
+      </div>
+
+      <div class="event-infos-card light-green">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>&nbsp<em><%= @event.address %></em>
+        </div>
+        <div class="event-infos">
+          <div>
+            <i class="fa-solid fa-calendar-day"></i> &nbsp
+          </div>
+          <div class="event-date">
+            From <strong><%= @event.start_time.strftime("%a %d %b %l:%M %p") %></strong><br>
+            To <strong><%= @event.end_time.strftime("%a %d %b %l:%M %p") %></strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-infos-card event-description white-label">
+        <p><%= @event.description %></p>
+      </div>
+    </div>
+
+    <div class="members">
+    </div>
+
+    <div class="comments">
+
+    </div>
+
+  </div>
+</div>
