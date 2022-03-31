@@ -17,6 +17,12 @@
   .future.next-month {
     background-color: #353535;
   }
+  .future.prev-month {
+    background-color: #353535;
+  }
+  .past.prev-month {
+    background-color: #353535;
+  }
 }
 
 .event {
@@ -38,6 +44,10 @@
   margin-right: 0.3rem;
   background: #f47141;
   border: none;
+}
+
+.btn-success:hover {
+  background: #f47141;
 }
 
 .table.table-striped {
