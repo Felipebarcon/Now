@@ -1,0 +1,52 @@
+<div class="main-event-div">
+  <div class="main-event-div-content">
+    <div class="event-part-div">
+      <div>
+        <% if @event.activity.name == 'Sport' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Sport Activity", class:"event-img" %>
+        <% elsif @event.activity.name == 'Finance' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Finance Activity", class:"event-img" %>
+        <% elsif @event.activity.name == 'Lecture' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Lecture Activity", class:"event-img" %>
+        <% elsif @event.activity.name == 'Meditation' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation Activity", class:"event-img" %>
+        <% elsif @event.activity.name == 'Projects' %>
+          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Projects Activity", class:"event-img" %>
+        <% end %>
+      </div>
+
+      <h3 class="orange text-center my-3"><%= @event.activity.name %></h3>
+
+      <div class="white-label organizer mb-3">
+        <i class="fa-solid fa-user"></i> Organized by <%= @event.user.username %>
+      </div>
+
+      <div class="event-infos-card light-green mb-3">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>&nbsp<em><%= @event.address %></em>
+        </div>
+        <div class="event-infos">
+          <div>
+            <i class="fa-solid fa-calendar-day"></i> &nbsp
+          </div>
+          <div class="event-date">
+            From <strong><%= @event.start_time.strftime("%a %d %b %l:%M %p") %></strong><br>
+            To <strong><%= @event.end_time.strftime("%a %d %b %l:%M %p") %></strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-infos-card event-description white-label mb-3">
+        <h4>Details</h4>
+        <p><%= @event.description %></p>
+      </div>
+    </div>
+
+    <div class="participants">
+    </div>
+
+    <div class="comments">
+    </div>
+
+  </div>
+</div>
