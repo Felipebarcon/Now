@@ -6,9 +6,9 @@ class GoalsController < ApplicationController
     @activities = Activity.all
     @goal = Goal.new
     @levels = Level.all
-    @yoda_phrase_1 = "Welcome ! So you need help to reach your goals ? You're in the right place ! First, choose a goal"
-    @yoda_phrase_2 = "Great ! Now, select the days of the week you're available !"
-    @yoda_phrase_3 = "Awesome ! Last step, you now have to select if you're motivated, very motivated, or SUPER motivated"
+    @yoda_phrase_1 = "Welcome young Padawan! So your goals you need help to reach ? hmm.  In the right place you are! Do or do not there is no try. First, choose a goal."
+    @yoda_phrase_2 = "Great!  Now, select the available days of the week you are!  Yes, hmmm."
+    @yoda_phrase_3 = "Awesome!  Last step, you now have to select if, motivated, very motivated, or super motivated you are. Herh herh herh."
     @yoda_id_1 = "yoda-1"
     @yoda_id_2 = "yoda-2"
     @yoda_id_3 = "yoda-3"
