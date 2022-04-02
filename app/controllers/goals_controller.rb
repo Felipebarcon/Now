@@ -24,6 +24,11 @@ class GoalsController < ApplicationController
     end
   end
 
+  def show
+    @goal = Goal.find(params[:id])
+    @tasks = @goal.tasks.order("created_at ASC")
+  end
+
   def summary
     @goal = Goal.find(params[:id])
   end
@@ -32,7 +37,6 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
     @goal.user = current_user
     @goal.save
-
     @goal.update(goal_params)
     redirect_to dashboard_path
   end

@@ -1,0 +1,37 @@
+<div class="main-tasks-div">
+  <div class="main-tasks-div-content general-container">
+    <div class="dash-tasks-title-page">
+      <h2>My tasks for <%= @goal.activity.name %></h2>
+    </div>
+    <div class="tasks-container">
+      <% @tasks.each do |task| %>
+        <div class="task">
+          <div class="task-content">
+            <h3><%= task.name %></h3>
+            <%= simple_form_for [@goal, task] do |f| %>
+              <div class="form-inputs">
+                <%= f.input :completed, as: :boolean, input_html: {value: task.completed}, as: :hidden %>
+              </div>
+              <div class="click-button">
+                <% if task.completed %>
+                  <button class="task-completed"><i class="fa-solid fa-check"></i></button>
+                <% else %>
+                  <button class="task-uncompleted"><i class="fa-solid fa-check"></i></button>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <%= link_to new_goal_task_path(@goal), class: "task" do %>
+        <div class="new-task">
+          <i class="fa-solid fa-circle-plus"></i>
+        </div>
+    <% end %>
+    </div>
+
+    <%= link_to dashboard_path, class: "prev-btn" do %>
+        <h2><i class='fa-solid fa-chevron-left summary-header'></i></h2>
+    <% end %>
+  </div>
+</div>
