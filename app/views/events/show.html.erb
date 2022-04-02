@@ -15,17 +15,13 @@
         <% end %>
       </div>
 
-      <div class="d-flex justify-content-between px-4 w-90">
+      <div class="d-flex justify-content-between align-items-center px-4">
         <h3 class="orange text-center my-3"><strong><%= @event.activity.name %></strong></h3>
         <div>
           <%= simple_form_for [@event, @registration] do |f| %>
-            <%= f.submit wrapper_html: { class: 'fa-solid fa-calendar-circle-plus' } %>
+            <%= f.button :button, '<i class="fa-solid fa-calendar-plus"></i>'.html_safe, method: :post, class: "event-icon calendar-icon" %>
           <% end %>
         </div>
-      </div>
-
-      <div class="white-label organizer mb-3">
-        <i class="fa-solid fa-user"></i> Organized by <%= @event.user.username %>
       </div>
 
       <div class="event-infos-card light-green mb-3">
@@ -40,6 +36,15 @@
             From <strong><%= @event.start_time.strftime("%a %d %b %l:%M %p") %></strong><br>
             To <strong><%= @event.end_time.strftime("%a %d %b %l:%M %p") %></strong>
           </div>
+        </div>
+      </div>
+
+      <div class="white-label event-infos-card mb-3">
+        <div>
+          <i class="fa-solid fa-user"></i> Organized by <%= @event.user.username %>
+        </div>
+        <div>
+          <i class="fa-solid fa-users"></i> <%= @participants.count %> other <%= 'participant'.pluralize(@participants.count) %> attending
         </div>
       </div>
 
