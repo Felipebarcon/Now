@@ -49,7 +49,7 @@ class GoalsController < ApplicationController
     citation = JSON.parse(citation_serialized)
     @citation = "#{citation["citation"]["citation"]}"
     @author = "#{"Une citation de: "}#{citation["citation"]["infos"]["personnage"]}"
-    @events = Event.all
+    @events = Event.joins(:registrations).where(user_id: @user.id)
   end
 
   private

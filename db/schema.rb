@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_02_084705) do
+ActiveRecord::Schema.define(version: 2022_04_02_133129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,15 +61,6 @@ ActiveRecord::Schema.define(version: 2022_04_02_084705) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "listings", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "event_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["event_id"], name: "index_listings_on_event_id"
-    t.index ["user_id"], name: "index_listings_on_user_id"
-  end
-
   create_table "registrations", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "event_id", null: false
@@ -106,8 +97,6 @@ ActiveRecord::Schema.define(version: 2022_04_02_084705) do
   add_foreign_key "goals", "activities"
   add_foreign_key "goals", "levels"
   add_foreign_key "goals", "users"
-  add_foreign_key "listings", "events"
-  add_foreign_key "listings", "users"
   add_foreign_key "registrations", "events"
   add_foreign_key "registrations", "users"
   add_foreign_key "tasks", "goals"
