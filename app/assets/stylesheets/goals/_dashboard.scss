@@ -201,8 +201,14 @@ hr {
 }
 
 .event {
+  padding-top: 0.5rem;
   a{
+    color: #f47141;
+    font-family: 'Exo 2', sans-serif;
     text-decoration: none;
-    color: white;
   }
+}
+
+.dashboard-container {
+  padding-bottom: 60px;
 }
