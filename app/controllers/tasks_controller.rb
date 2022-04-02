@@ -6,18 +6,17 @@ class TasksController < ApplicationController
   end
 
   def create
+    @goal = Goal.find(params[:goal_id])
     @task = Task.new(task_params)
-
-    if @task.save
-      redirect_to goal_path(@goal)
-    else
-      render "new"
-    end
+    @task.goal = @goal
+    @task.completed = false
+    @task.save
+    redirect_to goal_path(@goal)
   end
 
   private
 
-  def goal_params
+  def task_params
     params.require(:task).permit(:name, :completed, :goal_id)
   end
 end

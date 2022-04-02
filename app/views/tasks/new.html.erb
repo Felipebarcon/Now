@@ -1,9 +1,15 @@
-<div class="task-show-container">
-  <div class="task-show-container-content">
+<div class="main-start-div">
+  <div class="main-start-div-content general-container" style="justify-content: space-evenly">
+    <h2 class="summary-header">Create a task</h2>
 
-    <div class="dash-goals-title-page">
-      <h2 class="animate__animated animate__slideInLeft">Create a new task</h2>
-    </div>
+    <%= simple_form_for [@goal, @task] do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name,
+                    label_html: { class: "white-label" } %>
+      <div class="form-actions mt-5">
+        <%= f.submit class: "now-button", as: :submit %>
+      </div>
+    <% end %>
 
   </div>
 </div>
