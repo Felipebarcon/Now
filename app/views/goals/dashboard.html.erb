@@ -11,7 +11,7 @@
       <% events.each do |event| %>
         <div class="event">
           <p><%= link_to event.activity.name, event_path(event) %></p>
-          <small><%= event.start_time.strftime("%H: %M") %></small>
+          <small><%= event.start_time.strftime("%H: %M") %></small><br>
           <small><%= event.end_time.strftime("%H: %M") %></small>
         </div>
       <% end %>

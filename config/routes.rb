@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get 'goals/:id/summary', to: 'goals#summary', as: 'summary'
   get '/dashboard', to: 'goals#dashboard', as: 'dashboard'
 
-  resources :events, only: [:new, :create, :index, :show]
+  resources :events, only: [:new, :create, :index, :show] do
+    resources :registrations, only: [:create]
+  end
 end

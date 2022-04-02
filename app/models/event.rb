@@ -1,8 +1,8 @@
 class Event < ApplicationRecord
   belongs_to :user
   belongs_to :activity
-  has_many :listings
-  has_many :users, through: :listings
+  has_many :registrations
+  has_many :users, through: :registrations
 
   validates :description, :address, :start_time, :end_time, presence: true
   validate :event_time_valid?
