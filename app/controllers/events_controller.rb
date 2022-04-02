@@ -28,7 +28,10 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @registration = Registration.new
-    @participants = Event.find(params[:id]).users
+    @participants = @event.users
+
+    @comment = Comment.new
+    @comments = @event.comments
   end
 
   private

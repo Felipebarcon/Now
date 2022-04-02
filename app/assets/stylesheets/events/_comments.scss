@@ -1,0 +1,16 @@
+.comment-bar {
+  width: 100%;
+}
+
+.comment {
+  background-color: white;
+  color: rgb(57, 54, 54);
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  padding: 1vh;
+  border-radius: 4px;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 6vh;
+}

@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2022_04_02_133129) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.text "content", null: false
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_comments_on_event_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "address", null: false
@@ -92,6 +102,8 @@ ActiveRecord::Schema.define(version: 2022_04_02_133129) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "events"
+  add_foreign_key "comments", "users"
   add_foreign_key "events", "activities"
   add_foreign_key "events", "users"
   add_foreign_key "goals", "activities"
