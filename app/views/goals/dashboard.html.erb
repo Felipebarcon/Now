@@ -5,7 +5,7 @@
   </div>
 
   <div class="calendar">
-    <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events| %>
+    <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events, participations| %>
       <%= date %>
 
       <% events.each do |event| %>
@@ -29,18 +29,19 @@
   </div>
 
   <div class="card__container">
-    <% @goals.each_with_index do |goal, index| %>
+    <% @goals.each do |goal| %>
       <div class="card">
-        <div class="card__content" id=<%= index %>>
-          <div class="click-button" id="total">
-            <button class="clickme" id="count">Completed?</button>
-          </div>
+        <div class="card__content">
           <h3 class="card__header activity-name"><%= goal.activity.name%></h3>
           <div class="frequence">
             <h3 class="card__header frequency"><%= goal.level.frequency %></h3>
             <h3 id="week-times">Times per week</h3>
-
           </div>
+          <%= link_to goal_path(goal) do %>
+            <div class="click-button" id="tasks-btn">
+              <button><%= goal.tasks.count %> Tasks</button>
+            </div>
+          <% end %>
         </div>
       </div>
     <% end %>

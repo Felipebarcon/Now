@@ -1,18 +1,21 @@
 <div class="main-event-div">
   <div class="main-event-div-content">
     <div class="event-part-div">
-      <div>
-        <% if @event.activity.name == 'Sport' %>
-          <%= image_tag "sports.jpg", alt: "Sport Activity", class:"event-img" %>
-        <% elsif @event.activity.name == 'Finance' %>
-          <%= image_tag "epargne.jpg", alt: "Finance Activity", class:"event-img" %>
-        <% elsif @event.activity.name == 'Lecture' %>
-          <%= image_tag "lecture.jpg", alt: "Lecture Activity", class:"event-img" %>
-        <% elsif @event.activity.name == 'Meditation' %>
-          <%= image_tag "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation Activity", class:"event-img" %>
-        <% elsif @event.activity.name == 'Projects' %>
-          <%= image_tag "projet.jpeg", alt: "Projects Activity", class:"event-img" %>
-        <% end %>
+      <div style="background-image:url(<% if @event.activity.name == 'Sport' %>
+                                      <%= asset_path "sports.jpg", alt: "Sport Activity", class:"event-img" %>
+                                    <% elsif @event.activity.name == 'Finance' %>
+                                      <%= asset_path "epargne.jpg", alt: "Finance Activity", class:"event-img" %>
+                                    <% elsif @event.activity.name == 'Lecture' %>
+                                      <%= asset_path "lecture.jpg", alt: "Lecture Activity", class:"event-img" %>
+                                    <% elsif @event.activity.name == 'Meditation' %>
+                                      <%= asset_path "pexels-prasanth-inturi-1051838.jpg", alt: "Meditation Activity", class:"event-img" %>
+                                    <% elsif @event.activity.name == 'Projects' %>
+                                      <%= asset_path "projet.jpeg", alt: "Projects Activity", class:"event-img" %>
+                                    <% end %>);
+                                    height: 30vh;
+                                    background-size: cover;
+                                    background-position: center;">
+
       </div>
 
       <div class="d-flex justify-content-between align-items-center px-4">
