@@ -114,8 +114,11 @@
   margin: 0 auto;
 }
 
-
 .event-infos {
   display: flex;
   align-items: center;
+}
+
+.calendar-icon:hover {
+  color: lightgray;
 }
