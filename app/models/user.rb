@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :goals, dependent: :destroy
-
+  has_many :comments
   has_many :registrations
   has_many :events, dependent: :destroy
   # Include default devise modules. Others available are:

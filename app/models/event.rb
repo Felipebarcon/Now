@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
   belongs_to :user
   belongs_to :activity
+
+  has_many :comments
   has_many :registrations
   has_many :users, through: :registrations
 
