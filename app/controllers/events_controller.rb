@@ -28,16 +28,15 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @registration = Registration.new
-    @participants = Event.find(params[:id]).users
+    @participants = @event.users
+
+    @comment = Comment.new
+    @comments = @event.comments
   end
 
   private
 
   def event_params
     params.require(:event).permit(:user_id, :address, :description, :start_time, :end_time, :activity_id)
-  end
-
-  def find_event
-
   end
 end

@@ -8,7 +8,7 @@ class RegistrationsController < ApplicationController
     if @registration.save
       redirect_to dashboard_path
     else
-      render "new"
+      render "events/show"
     end
   end
 end

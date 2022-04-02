@@ -2,8 +2,8 @@ class Event < ApplicationRecord
   belongs_to :user
   belongs_to :activity
 
-  has_many :comments
-  has_many :registrations
+  has_many :comments, dependent: :destroy
+  has_many :registrations, dependent: :destroy
   has_many :users, through: :registrations
 
   validates :description, :address, :start_time, :end_time, presence: true
