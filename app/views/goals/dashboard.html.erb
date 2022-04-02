@@ -37,9 +37,6 @@
             <h3 class="card__header frequency"><%= goal.level.frequency %></h3>
             <h3 id="week-times">Times per week</h3>
           </div>
-          <div class="click-button" id="total">
-            <button class="clickme" id="count">Completed?</button>
-          </div>
           <%= link_to goal_path(goal) do %>
             <div class="click-button" id="tasks-btn">
               <button><%= goal.tasks.count %> Tasks</button>

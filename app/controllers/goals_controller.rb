@@ -26,7 +26,7 @@ class GoalsController < ApplicationController
 
   def show
     @goal = Goal.find(params[:id])
-    @tasks = @goal.tasks
+    @tasks = @goal.tasks.order("created_at ASC")
   end
 
   def summary
