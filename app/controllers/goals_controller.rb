@@ -24,6 +24,11 @@ class GoalsController < ApplicationController
     end
   end
 
+  def show
+    @goal = Goal.find(params[:id])
+    @tasks = @goal.tasks
+  end
+
   def summary
     @goal = Goal.find(params[:id])
   end

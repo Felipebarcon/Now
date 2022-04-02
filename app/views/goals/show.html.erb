@@ -1,0 +1,22 @@
+<div class="goal-show-container">
+  <div class="goal-show-container-content">
+    <div class="dash-goals-title-page">
+      <h2 class="animate__animated animate__slideInLeft">My tasks</h2>
+    </div>
+    <% @tasks.each do |task| %>
+      <div class="task">
+        <div class="task content">
+          <h3><%= task.name %></h3>
+          <div class="task-completed">
+            <%= task.completed %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class="task">
+      <div class="task-content">
+        <%= link_to ('<i class="fa-solid fa-circle-plus"></i>').html_safe, new_goal_task_path(@goal) %>
+      </div>
+    </div>
+  </div>
+</div>

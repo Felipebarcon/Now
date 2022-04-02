@@ -32,15 +32,19 @@
     <% @goals.each_with_index do |goal, index| %>
       <div class="card">
         <div class="card__content" id=<%= index %>>
-          <div class="click-button" id="total">
-            <button class="clickme" id="count">Completed?</button>
-          </div>
           <h3 class="card__header activity-name"><%= goal.activity.name%></h3>
           <div class="frequence">
             <h3 class="card__header frequency"><%= goal.level.frequency %></h3>
             <h3 id="week-times">Times per week</h3>
-
           </div>
+          <div class="click-button" id="total">
+            <button class="clickme" id="count">Completed?</button>
+          </div>
+          <%= link_to goal_path(goal) do %>
+            <div class="click-button" id="tasks-btn">
+              <button class="clickme"><%= goal.tasks.count %> Tasks</button>
+            </div>
+          <% end %>
         </div>
       </div>
     <% end %>
