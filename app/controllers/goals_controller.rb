@@ -57,8 +57,4 @@ class GoalsController < ApplicationController
   def goal_params
     params.require(:goal).permit(:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :activity_id, :level_id)
   end
-
-  # def task_params
-  #   params.require(:task).permit(:name, :completed, :goal_id)
-  # end
 end
