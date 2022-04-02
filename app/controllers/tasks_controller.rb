@@ -14,6 +14,17 @@ class TasksController < ApplicationController
     redirect_to goal_path(@goal)
   end
 
+  def update
+    @task = Task.find(params[:id])
+    if @task.completed
+      @task.completed = false
+    else
+      @task.completed = true
+    end
+    @task.save
+    redirect_to goal_path(@task.goal)
+  end
+
   private
 
   def task_params

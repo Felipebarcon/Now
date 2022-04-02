@@ -1,22 +1,37 @@
-<div class="goal-show-container">
-  <div class="goal-show-container-content">
-    <div class="dash-goals-title-page">
-      <h2 class="animate__animated animate__slideInLeft">My tasks</h2>
+<div class="main-tasks-div">
+  <div class="main-tasks-div-content general-container">
+    <div class="dash-tasks-title-page">
+      <h2>My tasks</h2>
     </div>
-    <% @tasks.each do |task| %>
-      <div class="task">
-        <div class="task content">
-          <h3><%= task.name %></h3>
-          <div class="task-completed">
-            <%= task.completed %>
+    <div class="tasks-container">
+      <% @tasks.each do |task| %>
+        <div class="task">
+          <div class="task-content">
+            <h3><%= task.name %></h3>
+            <%= simple_form_for [@goal, task] do |f| %>
+              <div class="form-inputs">
+                <%= f.input :completed, as: :boolean, input_html: {value: task.completed}, as: :hidden %>
+              </div>
+              <div class="click-button">
+                <% if task.completed %>
+                  <button class="task-completed"><i class="fa-solid fa-check"></i></button>
+                <% else %>
+                  <button class="task-uncompleted"><i class="fa-solid fa-check"></i></button>
+                <% end %>
+              </div>
+            <% end %>
           </div>
         </div>
-      </div>
+      <% end %>
+    <%= link_to new_goal_task_path(@goal), class: "task" do %>
+        <div class="new-task">
+          <i class="fa-solid fa-circle-plus"></i>
+        </div>
     <% end %>
-    <div class="task">
-      <div class="task-content">
-        <%= link_to ('<i class="fa-solid fa-circle-plus"></i>').html_safe, new_goal_task_path(@goal) %>
-      </div>
     </div>
+
+    <%= link_to dashboard_path, class: "prev-btn" do %>
+        <h2><i class='fa-solid fa-chevron-left summary-header'></i></h2>
+    <% end %>
   </div>
 </div>

@@ -37,7 +37,6 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
     @goal.user = current_user
     @goal.save
-
     @goal.update(goal_params)
     redirect_to dashboard_path
   end
@@ -58,4 +57,8 @@ class GoalsController < ApplicationController
   def goal_params
     params.require(:goal).permit(:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :activity_id, :level_id)
   end
+
+  # def task_params
+  #   params.require(:task).permit(:name, :completed, :goal_id)
+  # end
 end
