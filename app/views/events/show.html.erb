@@ -57,15 +57,15 @@
       </div>
     </div>
 
-    <div class="event-infos-card" data-controller="insert-in-list">
+    <div class="event-infos-card">
       <h4 class="orange mb-3">Comments (<%= @comments.count %>)</h4>
 
-      <div data-insert-in-list-target="items">
+      <div>
         <% if @event.comments.blank? %>
           <p class="white-label"><em>Any question ?</em></p>
         <% else %>
           <% @comments.each do |comment| %>
-            <div class="comment">
+            <div class="comment" id="comment-<%= comment.id %>">
               <div class="d-flex justify-content-between align-items-center">
                 <div class="comment-username"><strong><%= comment.user.username %></strong></div>
                 <div><em><%= comment.created_at.strftime('%d-%m-%y %H:%M') %></em></div>
@@ -75,21 +75,20 @@
           <% end %>
         <% end %>
       </div>
+      <%= simple_form_for([ @event, @comment ],
+          data: { insert_in_list_target: 'form' }, remote: true) do |f| %>
       <div class="d-flex justify-content-between">
         <div class="w-100">
-          <%= simple_form_for([ @event, @comment ],
-                    data: { insert_in_list_target: 'form' }) do |f| %>
               <%= f.input :content,
                           label: false,
                           placeholder: "Ask a question or suggest an idea",
                           input_html: { class: "comment-bar"} %>
         </div>
         <div>
-            <%= f.button :button, '<i class="fa-solid fa-circle-chevron-right"></i>'.html_safe, method: :post, class: "event-icon calendar-icon" %>
-        <% end %>
+            <%= f.button :button, '<i class="fa-solid fa-circle-chevron-right"></i>'.html_safe, class: "event-icon calendar-icon" %>
         </div>
+      <% end %>
       </div>
     </div>
-
   </div>
 </div>
