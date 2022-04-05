@@ -18,19 +18,31 @@
       <div class="next-btn">
         <h2><i class='fa-solid fa-chevron-right summary-header'></i></h2>
       </div>
-      <audio autoplay="true" src="<% asset_path "starwars-song.mp3" %>" type="audio/mp3" id="starwars-audio"></audio>
+      <audio autoplay="true" src="<%= asset_path('starwars-song.mp3') %>" type="audio/mp3" id="starwars-audio"></audio>
         <script type="text/javascript">
-          const myaud = document.getElementById("starwars-audio");
-          const k = setInterval("pauseAud()", 15000);
-
-          const playAud = () => {
-              myaud.play();
+        const sound = document.getElementById('starwars-audio');
+        const fadeAudio = setInterval(() => {
+          const fadePoint = sound.duration - 120;
+          if ((sound.currentTime >= fadePoint) && (sound.volume !== 0)) {
+            sound.volume -= 0.1
           }
 
-          const pauseAud = () => {
-              myaud.pause();
-              clearInterval(k);
+          if (sound.volume < 0.003) {
+            clearInterval(fadeAudio);
           }
+        }, 250);
+
+          // const myaud = document.getElementById("starwars-audio");
+          // const k = setInterval("pauseAud()", 15000);
+
+          // const playAud = () => {
+          //     myaud.play();
+          // }
+
+          // const pauseAud = () => {
+          //     myaud.pause();
+          //     clearInterval(k);
+          // }
         </script>
     </div>
 </div>
