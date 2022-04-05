@@ -7,10 +7,10 @@
       <%= link_to event_path(event) do %>
         <div class="event-card">
           <div class="event-header">
-            <div class="event-icon ">
+            <div class="event-icon orange">
               <span><%= event.activity.name %></span>
             </div>
-            <div class="event-icon">
+            <div class="event-icon orange">
               <% if event.activity.name == 'Sport' %>
                 <%= '<i class="fa-solid fa-person-walking orange"></i>'.html_safe %>
               <% elsif event.activity.name == 'Finance' %>

@@ -22,21 +22,20 @@
         <h3 class="orange text-center my-3"><strong><%= @event.activity.name %></strong></h3>
         <div>
           <% if @event.user == current_user %>
-            <i class="fa-solid fa-calendar-check event-icon calendar-icon"></i>
-          <% elsif @registration_event.empty? %>
-            <%= simple_form_for([@event, @registration], remote: true) do |f| %>
+            <i class="fa-solid fa-calendar-check event-icon light-green"></i>
+          <% elsif @participation_event.empty? %>
+            <%= simple_form_for([@event, @participation], remote: true) do |f| %>
               <%= f.button :button,
                           '<i class="fa-solid fa-calendar-plus"></i>'.html_safe,
-                          class: "event-icon calendar-icon",
+                          class: "event-icon white-label event-attend",
                           data: { confirm: "Do you want to attend that event ?" }  %>
             <% end %>
-          <% elsif !@registration_event.empty? %>
-            <%= link_to '<i class="fa-solid fa-calendar-xmark"></i>'.html_safe,
-                        registration_path(@registration_event.first),
+          <% elsif !@participation_event.empty? %>
+            <%= link_to '<i class="fa-solid fa-calendar-xmark event-icon red delete-icon"></i>'.html_safe,
+                        participation_path(@participation_event.first),
                         method: :delete,
                         data: { confirm: "Are you sure you want to quit that event?" },
-                        remote: true,
-                        class: "event-icon calendar-icon delete-icon" %>
+                        remote: true %>
           <% end %>
         </div>
       </div>
