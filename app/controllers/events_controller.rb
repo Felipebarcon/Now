@@ -7,10 +7,10 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
-      @registration = Registration.new
-      @registration.event = @event
-      @registration.user = current_user
-      @registration.save
+      @participation = Participation.new
+      @participation.event = @event
+      @participation.user = current_user
+      @participation.save
       redirect_to events_path
     else
       render "new"
@@ -31,11 +31,12 @@ class EventsController < ApplicationController
   end
 
   def show
+    @now = DateTime.now
     @event = Event.find(params[:id])
-    @registration = Registration.new
+    @participation = Participation.new
     @participants = @event.users
 
-    @registration_event = Registration.where(user: current_user, event: @event)
+    @participation_event = Participation.where(user: current_user, event: @event)
 
     @comment = Comment.new
     @comments = @event.comments

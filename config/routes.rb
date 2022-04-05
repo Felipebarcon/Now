@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'goals#dashboard', as: 'dashboard'
 
   resources :events, only: [:new, :create, :index, :show] do
-    resources :registrations, only: [:create]
+    resources :participations, only: [:create]
     resources :comments, only: [:create]
   end
 
-  resources :registrations, only: [:destroy]
+  resources :participations, only: [:destroy]
 end

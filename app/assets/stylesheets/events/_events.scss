@@ -31,7 +31,6 @@
 
 .event-icon {
   font-size: 30px;
-  color: #f47141;
 
   span {
     font-size: 26px;
@@ -113,4 +112,9 @@
 
 .calendar-icon:hover {
   color: lightgray;
+}
+
+.delete-icon {
+  color: rgb(238, 41, 41);
+  padding: 0.2vh 2vh;
 }
