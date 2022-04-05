@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to event_path(@event)
+      redirect_to event_path(@event, anchor: "comment-#{@comment.id}")
     else
       render 'events/show'
     end
