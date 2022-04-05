@@ -31,7 +31,6 @@ import { prevBtn } from '../plugins/prevBtn';
 import { clickBtndashboard } from '../plugins/clickBtndashboard';
 import { initLocationAutocomplete} from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
-import { playAudio } from '../plugins/playAudio';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -42,7 +41,6 @@ document.addEventListener('turbolinks:load', () => {
   clickBtndashboard();
   initLocationAutocomplete();
   initMapbox();
-  // playAudio();
 });
 
 import "controllers"

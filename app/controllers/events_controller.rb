@@ -7,6 +7,10 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
+      @registration = Registration.new
+      @registration.event = @event
+      @registration.user = current_user
+      @registration.save
       redirect_to events_path
     else
       render "new"
