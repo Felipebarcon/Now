@@ -32,7 +32,12 @@ activities = Activity.create([
 
 puts "Creating levels"
 levels = Level.create([
-    {name: "Beginner", frequency: 2},
-    {name: "Medium", frequency: 4},
-    {name: "Hard", frequency: 6},
+    {name: "Motivated", frequency: 2},
+    {name: "Very Motivated", frequency: 4},
+    {name: "Super Motivated", frequency: 6},
   ])
+
+puts "Creating events"
+events = Event.create([
+  {user_id: User.all.sample.id, address: "Carouge", start_time: DateTime.new(2022,4,9,17), end_time: DateTime.new(2022,4,9,19), description: "This is a test", activity_id: Activity.all.sample.id}
+])
