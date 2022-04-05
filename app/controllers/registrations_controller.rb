@@ -6,9 +6,16 @@ class RegistrationsController < ApplicationController
     @registration.user = current_user
 
     if @registration.save
-      redirect_to dashboard_path
+      redirect_to event_path(@event)
     else
       render "events/show"
     end
+  end
+
+  def destroy
+    @registration = Registration.find(params[:id])
+    @registration.destroy
+
+    redirect_to event_path(@registration.event)
   end
 end

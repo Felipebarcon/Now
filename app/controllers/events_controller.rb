@@ -19,6 +19,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @events_sorted = @events.sort_by(&:start_time).reverse
 
     @markers = @events.geocoded.map do |event|
       {
@@ -33,6 +34,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @registration = Registration.new
     @participants = @event.users
+
+    @registration_event = Registration.where(user: current_user, event: @event)
 
     @comment = Comment.new
     @comments = @event.comments
