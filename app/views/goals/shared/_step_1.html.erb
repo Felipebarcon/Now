@@ -18,7 +18,7 @@
       <div class="next-btn">
         <h2><i class='fa-solid fa-chevron-right summary-header'></i></h2>
       </div>
-      <audio autoplay="true" src="https://www.thesoundarchive.com/starwars/star-wars-theme-song.mp3" type="audio/mp3" id="starwars-audio"></audio>
+      <audio autoplay="true" src="<% asset_path "starwars-song.mp3" %>" type="audio/mp3" id="starwars-audio"></audio>
         <script type="text/javascript">
           const myaud = document.getElementById("starwars-audio");
           const k = setInterval("pauseAud()", 15000);
