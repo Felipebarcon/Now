@@ -31,6 +31,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @now = DateTime.now
     @event = Event.find(params[:id])
     @participation = Participation.new
     @participants = @event.users
