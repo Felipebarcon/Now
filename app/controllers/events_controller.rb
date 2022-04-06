@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    @events_sorted = @events.sort_by(&:start_time).reverse
+    @events_sorted = @events.sort_by(&:start_time)
 
     @markers = @events.geocoded.map do |event|
       {
