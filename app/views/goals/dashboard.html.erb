@@ -39,7 +39,7 @@
           </div>
           <%= link_to goal_path(goal) do %>
             <div class="click-button" id="tasks-btn">
-              <button><%= goal.tasks.count %> Tasks</button>
+              <button><%= goal.tasks.where(completed: false).count %> Tasks</button>
             </div>
           <% end %>
         </div>
