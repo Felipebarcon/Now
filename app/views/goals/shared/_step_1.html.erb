@@ -3,6 +3,7 @@
       <div class="title-header">
         <h1>Activities</h1>
       </div>
+
       <%= f.association :activity,
             legend_tag: false,
             as: :radio_buttons,
@@ -10,14 +11,18 @@
             collection_wrapper_class: 'element-wrapper',
             item_wrapper_class: 'element-item',
             input_html: {class: 'element-selector'},
-            collection: activities
+            collection: activities,
+            checked: activities.first.id
       %>
+
       <div class="prev-btn">
         <h2><i class='fa-solid fa-chevron-left summary-header'></i></h2>
       </div>
+
       <div class="next-btn">
         <h2><i class='fa-solid fa-chevron-right summary-header'></i></h2>
       </div>
+
       <% if user_signed_in? == false %>
         <audio autoplay="true" src="<%= asset_path('starwars-song.mp3') %>" type="audio/mp3" id="starwars-audio"></audio>
           <script type="text/javascript">

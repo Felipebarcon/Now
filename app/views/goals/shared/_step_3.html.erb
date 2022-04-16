@@ -11,7 +11,8 @@
                   collection_wrapper_class: 'element-wrapper',
                   item_wrapper_class: 'element-item',
                   input_html: {class: 'element-selector'},
-                  collection: levels %>
+                  collection: levels,
+                  checked: levels.first.id %>
       </div>
       <div class= "mb-3">
         <%= f.submit class: 'button' %>

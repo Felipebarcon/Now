@@ -30,6 +30,9 @@
           <% if @goal.sunday %>
           <div class="choice-item">Sunday</div>
         <% end %>
+        <% if !@goal.monday && !@goal.tuesday && !@goal.wednesday && !@goal.thursday && !@goal.friday && !@goal.saturday && !@goal.sunday %>
+          <div class="choice-item">No weekly routine selected</div>
+        <% end %>
       </div>
     </div>
 
