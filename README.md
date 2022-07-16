@@ -14,4 +14,3 @@ You will also be able to chat with other users of the application.
 
 Don't wait any longer and discover Now!
 
-Translated with www.DeepL.com/Translator (free version)
